@@ -1,0 +1,28 @@
+{
+  "name": "personal-portfolio",
+  "version": "0.1.0",
+  "description": "Emily Yu/'s portfolio website",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilyyu518/personalPortfolio.git"
+  },
+  "author": "Emily Yu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emilyyu518/personalPortfolio/issues"
+  },
+  "homepage": "https://github.com/emilyyu518/personalPortfolio#readme"
+}
