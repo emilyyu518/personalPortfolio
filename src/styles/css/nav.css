@@ -1,0 +1,68 @@
+@use autoprefixer;
+.nav-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: .75rem 1rem; }
+
+.brand {
+  font-size: 33pt; }
+
+.nav-links {
+  display: flex;
+  position: relative; }
+
+.nav-button, .nav-button-peach-active, .nav-button-peach:hover, .nav-button-ultramarine-active, .nav-button-ultramarine:hover, .nav-button-berry-active, .nav-button-berry:hover {
+  border: 2pt solid black;
+  display: flex;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 15pt;
+  font-weight: 500;
+  justify-content: center;
+  margin: 0 .75rem;
+  padding: .3rem 0;
+  width: 7rem; }
+
+.nav-button-peach-active, .nav-button-peach:hover {
+  background-color: #cf775f;
+  border-color: #cf775f;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  top: 0; }
+
+.nav-button-peach:hover {
+  position: static;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
+.nav-button-ultramarine-active, .nav-button-ultramarine:hover {
+  background-color: #3d00ff;
+  border-color: #3d00ff;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  top: 0; }
+
+.nav-button-ultramarine:hover {
+  position: static;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
+.nav-button-berry-active, .nav-button-berry:hover {
+  background-color: #bc0077;
+  border-color: #bc0077;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  top: 0; }
+
+.nav-button-berry:hover {
+  position: static;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
+/*# sourceMappingURL=nav.css.map */
