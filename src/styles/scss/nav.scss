@@ -1,0 +1,62 @@
+@use autoprefixer;
+@import 'variables';
+
+
+.nav-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: .75rem 1rem;
+}
+
+.brand {
+  font: {
+    size: 33pt;
+  }
+}
+
+.nav-links {
+  display: flex;
+  position: relative;
+}
+
+.nav-button {
+  border: 2pt solid black;
+  display: flex;
+  font: {
+    family: 'futura-pt', sans-serif;
+    size: 15pt;
+    weight: $medium;
+  }
+  justify-content: center;
+  margin: 0 .75rem;
+  padding: .3rem 0;
+  width: 7rem;
+}
+
+$colors: (
+  peach: $peach,
+  ultramarine: $ultramarine,
+  berry: $berry,
+  );
+@each $name, $value in $colors {
+  .nav-button-#{$name}-active {
+    @extend .nav-button;
+    background-color: $value;
+    border-color: $value;
+    color: white;
+    font: {
+      weight: $bold;
+    }
+    position: absolute;
+    top: 0;
+  }
+  .nav-button-#{$name}:hover {
+    @extend .nav-button-#{$name}-active;
+    position: static;
+    transition-duration: .5s;
+    transition-property: background-color;
+    transition-timing-function: ease;
+  }
+}
+
