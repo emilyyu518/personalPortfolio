@@ -14,7 +14,7 @@ class Home extends React.Component {
     const { jumbotronIndex } = this.props;
     return (
       <div>
-        <Jumbotron text="Hi, I'm Emily" jumbotronIndex={jumbotronIndex} />
+        <Jumbotron text="Hi, I'm Emily." jumbotronIndex={jumbotronIndex} />
       </div>
     );
   }
