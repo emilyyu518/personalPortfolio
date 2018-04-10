@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Jumbotron from './jumbotron';
-import '../../styles/css/home.css';
 
 
 class Home extends React.Component {

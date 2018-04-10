@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Brand from './brand';
 import NavButton from './nav-button';
-import '../../styles/css/nav.css';
 
 class NavBar extends React.Component {
   constructor(props) {

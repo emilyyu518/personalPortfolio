@@ -5,7 +5,6 @@ import Triangles from '../../assets/triangles.svg';
 import Pills from '../../assets/pills.svg';
 import Stripes from '../../assets/stripes.svg';
 import Dots from '../../assets/dots.svg';
-import '../../styles/css/home.css';
 
 const patterns = [Triangles, Pills, Stripes, Dots];
 

@@ -1,3 +1,4 @@
+@use autoprefixer;
 body {
   margin: 0;
   padding: 0;
@@ -12,5 +13,119 @@ a {
 
 a:hover {
   color: #bc0077; }
+
+@use autoprefixer;
+.nav-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: .75rem 1rem; }
+
+.brand {
+  font-size: 33pt; }
+
+.nav-links {
+  display: flex;
+  position: relative; }
+
+.nav-button, .nav-button-peach-active, .nav-button-peach:hover, .nav-button-ultramarine-active, .nav-button-ultramarine:hover, .nav-button-berry-active, .nav-button-berry:hover {
+  border: 2pt solid black;
+  display: flex;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 15pt;
+  font-weight: 500;
+  justify-content: center;
+  margin: 0 .75rem;
+  padding: .3rem 0;
+  width: 7rem; }
+
+.nav-button-peach-active, .nav-button-peach:hover {
+  background-color: #cf775f;
+  border-color: #cf775f;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  top: 0; }
+
+.nav-button-peach:hover {
+  position: static;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
+.nav-button-ultramarine-active, .nav-button-ultramarine:hover {
+  background-color: #3d00ff;
+  border-color: #3d00ff;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  top: 0; }
+
+.nav-button-ultramarine:hover {
+  position: static;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
+.nav-button-berry-active, .nav-button-berry:hover {
+  background-color: #bc0077;
+  border-color: #bc0077;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  top: 0; }
+
+.nav-button-berry:hover {
+  position: static;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem; }
+
+.social-media-button {
+  align-items: center;
+  border: 2pt solid black;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  font-size: 14pt;
+  height: 2.75rem;
+  justify-content: center;
+  margin-left: .75rem;
+  width: 2.75rem; }
+
+.social-media-button:hover {
+  background-color: #bc0077;
+  border-color: #bc0077;
+  color: white;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
+@use autoprefixer;
+.jumbotron-container {
+  position: relative; }
+
+.jumbotron {
+  background-repeat: 'repeat';
+  height: 25rem;
+  opacity: .2;
+  margin-top: 5%; }
+
+.jumbotron-text {
+  font-family: 'futura-pt';
+  font-size: 64pt;
+  font-style: italic;
+  font-weight: 700;
+  margin-left: 4rem;
+  margin-top: 2rem;
+  position: absolute;
+  top: 0; }
 
 /*# sourceMappingURL=index.css.map */
