@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Jumbotron from '../home/jumbotron';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class Contact extends React.Component {
   render() {
     return (
       <div>
-        <h1>Contact Me</h1>
+        <Jumbotron text="Coming soon..." jumbotronIndex={1} />
       </div>
     );
   }

@@ -65,4 +65,31 @@
   transition-property: background-color;
   transition-timing-function: ease; }
 
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem; }
+
+.social-media-button {
+  align-items: center;
+  border: 2pt solid black;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  font-size: 14pt;
+  height: 2.75rem;
+  justify-content: center;
+  margin-left: .75rem;
+  width: 2.75rem; }
+
+.social-media-button:hover {
+  background-color: #bc0077;
+  border-color: #bc0077;
+  color: white;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
 /*# sourceMappingURL=nav.css.map */

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Brand extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class Brand extends React.Component {
     this.shuffleColors();
   }
   shuffleColors() {
+    const { generateRandomIndex, setCurrentPage } = this.props;
     const { colors } = this.state;
     const colorsCopy = colors.slice(0);
     for (let i = colorsCopy.length - 1; i > 0; i--) {
@@ -27,6 +29,8 @@ class Brand extends React.Component {
       colorsCopy[i] = colorAtRandom;
     }
     this.setState({ colors: colorsCopy });
+    generateRandomIndex();
+    setCurrentPage(null);
   }
   render() {
     const { colors } = this.state;
@@ -47,5 +51,15 @@ class Brand extends React.Component {
     );
   }
 }
+
+Brand.propTypes = {
+  generateRandomIndex: PropTypes.func,
+  setCurrentPage: PropTypes.func,
+};
+
+Brand.defaultProps = {
+  generateRandomIndex: null,
+  setCurrentPage: null,
+};
 
 export default Brand;
