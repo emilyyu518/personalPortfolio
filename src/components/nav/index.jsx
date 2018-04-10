@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Brand from './brand';
 import NavButton from './nav-button';
 import '../../styles/css/nav.css';
@@ -15,10 +16,11 @@ class NavBar extends React.Component {
     this.setState({ currentPage: page });
   }
   render() {
+    const { generateRandomIndex } = this.props;
     const { currentPage } = this.state;
     return (
       <nav className="nav-bar">
-        <Brand />
+        <Brand generateRandomIndex={generateRandomIndex} setCurrentPage={this.setCurrentPage} />
         <div className="nav-links">
           <NavButton
             destination="/about"
@@ -46,5 +48,13 @@ class NavBar extends React.Component {
     );
   }
 }
+
+NavBar.propTypes = {
+  generateRandomIndex: PropTypes.func,
+};
+
+NavBar.defaultProps = {
+  generateRandomIndex: null,
+};
 
 export default NavBar;
