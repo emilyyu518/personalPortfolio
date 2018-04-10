@@ -1,0 +1,26 @@
+@use autoprefixer;
+@import '_variables';
+
+.jumbotron-container {
+  position: relative;
+}
+.jumbotron {
+  background-repeat: 'repeat';
+  // color: white;
+  height: 30rem;
+  opacity: .2;
+  margin-top: 5%;
+}
+
+.jumbotron-text {
+  font: {
+    family: 'futura-pt';
+    size: 64pt;
+    weight: $bold;
+  }
+  margin-left: 4rem;
+  margin-top: 2rem;
+  position: absolute;
+  top: 0;
+}
+

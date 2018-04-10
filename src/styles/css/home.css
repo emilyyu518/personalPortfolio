@@ -1,0 +1,20 @@
+@use autoprefixer;
+.jumbotron-container {
+  position: relative; }
+
+.jumbotron {
+  background-repeat: 'repeat';
+  height: 30rem;
+  opacity: .2;
+  margin-top: 5%; }
+
+.jumbotron-text {
+  font-family: 'futura-pt';
+  font-size: 64pt;
+  font-weight: 700;
+  margin-left: 4rem;
+  margin-top: 2rem;
+  position: absolute;
+  top: 0; }
+
+/*# sourceMappingURL=home.css.map */
