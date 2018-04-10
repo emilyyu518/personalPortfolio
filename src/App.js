@@ -5,6 +5,7 @@ import Home from './components/home/index';
 import About from './components/about/index';
 import Portfolio from './components/work/index';
 import Contact from './components/contact/index';
+import Footer from './components/nav/footer';
 
 class App extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class App extends Component {
             <Route path="/contact" component={Contact} />
           </Switch>
         </main>
+        <Footer />
       </div>
     );
   }
