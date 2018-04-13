@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const styles = {
   active: {
-    marginTop: '-.4rem',
-    marginLeft: '1.1rem',
+    marginTop: '-.4em',
+    marginLeft: '.4em',
     transitionDuration: '.5s',
     transitionProperty: 'margin',
     transitionTimingFunction: 'ease',
@@ -24,12 +24,19 @@ const NavButton = (props) => {
     text,
     setCurrentPage,
     active,
+    closeNav,
   } = props;
   const currentlyActive = active || window.location.pathname === destination;
 
   return (
-    <span>
-      <Link to={destination} onClick={() => setCurrentPage(text)}>
+    <span className="nav-link">
+      <Link
+        to={destination}
+        onClick={() => {
+          setCurrentPage(text);
+          closeNav();
+        }}
+      >
         <div className={`nav-button nav-button-${color}`}>
           {text}
         </div>
@@ -49,6 +56,7 @@ NavButton.propTypes = {
   text: PropTypes.string,
   setCurrentPage: PropTypes.func,
   active: PropTypes.bool,
+  closeNav: PropTypes.func,
 };
 
 NavButton.defaultProps = {
@@ -57,6 +65,7 @@ NavButton.defaultProps = {
   text: 'about',
   setCurrentPage: null,
   active: false,
+  closeNav: null,
 };
 
 export default NavButton;
