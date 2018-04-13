@@ -9,8 +9,53 @@
   font-size: 33pt; }
 
 .nav-links {
-  display: flex;
+  display: flex; }
+
+.nav-link {
   position: relative; }
+
+.hamburger-container {
+  position: sticky; }
+
+.hamburger-box {
+  display: none;
+  background: #fff;
+  height: 2rem;
+  position: relative;
+  width: 2rem; }
+  .hamburger-box input[type=checkbox] {
+    display: none; }
+  .hamburger-box label {
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%; }
+  .hamburger-box .bun {
+    position: absolute;
+    height: .25rem;
+    width: 100%;
+    background-color: #000;
+    transition: all .5s; }
+  .hamburger-box .diagonal.bun-top {
+    position: relative;
+    float: left; }
+  .hamburger-box .horizontal {
+    position: relative;
+    float: left;
+    margin-top: .5rem; }
+  .hamburger-box .diagonal.bun-bottom {
+    position: relative;
+    float: left;
+    margin-top: .5rem; }
+  .hamburger-box input[type=checkbox]:checked ~ .hamburger-spin > .horizontal {
+    opacity: 0; }
+  .hamburger-box input[type=checkbox]:checked ~ .hamburger-spin > .diagonal.bun-top {
+    transform: rotate(135deg);
+    margin-top: .75rem; }
+  .hamburger-box input[type=checkbox]:checked ~ .hamburger-spin > .diagonal.bun-bottom {
+    transform: rotate(-135deg);
+    margin-top: -1rem; }
 
 .nav-button, .nav-button-peach-active, .nav-button-peach:hover, .nav-button-ultramarine-active, .nav-button-ultramarine:hover, .nav-button-berry-active, .nav-button-berry:hover {
   border: 2pt solid black;
@@ -19,7 +64,7 @@
   font-size: 15pt;
   font-weight: 500;
   justify-content: center;
-  margin: 0 .75rem;
+  margin: 0 1.5rem 0 0;
   padding: .3rem 0;
   width: 7rem; }
 
@@ -37,6 +82,19 @@
   transition-property: background-color;
   transition-timing-function: ease; }
 
+@media (hover: none), (hover: on-demand) {
+  .nav-button-peach:hover {
+    /* suppress hover effect on devices that don't support hover fully */
+    background: none;
+    border: 2pt solid black;
+    display: flex;
+    font-family: 'futura-pt', sans-serif;
+    font-size: 15pt;
+    font-weight: 500;
+    justify-content: center;
+    margin: 0 .75rem;
+    padding: .3rem 0;
+    width: 7rem; } }
 .nav-button-ultramarine-active, .nav-button-ultramarine:hover {
   background-color: #3d00ff;
   border-color: #3d00ff;
@@ -51,6 +109,19 @@
   transition-property: background-color;
   transition-timing-function: ease; }
 
+@media (hover: none), (hover: on-demand) {
+  .nav-button-ultramarine:hover {
+    /* suppress hover effect on devices that don't support hover fully */
+    background: none;
+    border: 2pt solid black;
+    display: flex;
+    font-family: 'futura-pt', sans-serif;
+    font-size: 15pt;
+    font-weight: 500;
+    justify-content: center;
+    margin: 0 .75rem;
+    padding: .3rem 0;
+    width: 7rem; } }
 .nav-button-berry-active, .nav-button-berry:hover {
   background-color: #bc0077;
   border-color: #bc0077;
@@ -65,6 +136,44 @@
   transition-property: background-color;
   transition-timing-function: ease; }
 
+@media (hover: none), (hover: on-demand) {
+  .nav-button-berry:hover {
+    /* suppress hover effect on devices that don't support hover fully */
+    background: none;
+    border: 2pt solid black;
+    display: flex;
+    font-family: 'futura-pt', sans-serif;
+    font-size: 15pt;
+    font-weight: 500;
+    justify-content: center;
+    margin: 0 .75rem;
+    padding: .3rem 0;
+    width: 7rem; } }
+@media only screen and (max-width: 758px) {
+  .nav-bar {
+    flex-wrap: wrap;
+    position: relative; }
+
+  .hamburger-box {
+    display: inherit; }
+
+  .nav-links {
+    background-color: white;
+    border: 4pt black solid;
+    flex-direction: column;
+    padding: 0 2rem 2rem 2rem;
+    position: absolute;
+    right: -200vw;
+    top: 20vh;
+    transition: right 1s;
+    z-index: 100; }
+
+  .nav-link {
+    margin-top: 2rem; }
+
+  .nav-button, .nav-button-peach-active, .nav-button-peach:hover, .nav-button-ultramarine-active, .nav-button-ultramarine:hover, .nav-button-berry-active, .nav-button-berry:hover {
+    margin: 0;
+    width: 60vw; } }
 .footer {
   align-items: center;
   display: flex;
