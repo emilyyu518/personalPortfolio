@@ -23,7 +23,7 @@ class App extends Component {
     const { jumbotronIndex } = this.state;
     const homeProps = { jumbotronIndex };
     return (
-      <div>
+      <div className="content">
         <NavBar generateRandomIndex={this.generateRandomIndex} />
         <main>
           <Switch>

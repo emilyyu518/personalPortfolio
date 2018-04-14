@@ -3,7 +3,7 @@ import SocialMediaButton from './social-media-button';
 
 const Footer = (props) => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <SocialMediaButton
         name="Emily Yu's LinkedIn"
         link="https://www.linkedin.com/in/emilyyu518/"
@@ -19,7 +19,7 @@ const Footer = (props) => {
         link="mailto:emilyyu518@gmail.com"
         icon="fas fa-envelope"
       />
-    </div>
+    </footer>
   );
 };
 

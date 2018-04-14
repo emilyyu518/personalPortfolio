@@ -4,7 +4,7 @@
 
 .jumbotron {
   background-repeat: 'repeat';
-  height: 25rem;
+  height: 60vh;
   opacity: .2;
   margin-top: 5%; }
 
@@ -17,5 +17,9 @@
   margin-top: 2rem;
   position: absolute;
   top: 0; }
+
+@media only screen and (max-width: 758px) {
+  .jumbotron-text {
+    margin-left: 2rem; } }
 
 /*# sourceMappingURL=home.css.map */
