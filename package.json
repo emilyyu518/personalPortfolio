@@ -18,7 +18,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "sass": "sass --watch src/styles/scss:src/styles/css"
+    "sass": "sass --watch src/styles/scss:src/styles/css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -29,11 +31,12 @@
   "bugs": {
     "url": "https://github.com/emilyyu518/personalPortfolio/issues"
   },
-  "homepage": "https://github.com/emilyyu518/personalPortfolio#readme",
+  "homepage": "https://www.emilyyu.me/",
   "devDependencies": {
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "gh-pages": "^1.1.0"
   }
 }
