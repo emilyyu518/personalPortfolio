@@ -1,0 +1,24 @@
+.imagebox-container {
+  position: relative; }
+
+.imagebox {
+  float: left; }
+
+.imagebox-pattern {
+  background-repeat: repeat;
+  border-style: solid;
+  border-width: 3pt;
+  box-sizing: border-box;
+  color: transparent;
+  margin-top: 1rem;
+  margin-left: -1rem;
+  opacity: .2; }
+
+.image {
+  left: 0;
+  margin-top: -1rem;
+  margin-left: 1rem;
+  position: absolute;
+  top: 0; }
+
+/*# sourceMappingURL=image-container.css.map */
