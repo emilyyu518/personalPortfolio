@@ -11,6 +11,7 @@
     style: italic;
     weight: $medium;
   }
+  white-space: nowrap;
 }
 
 .heading {
@@ -30,8 +31,8 @@
   box-sizing: border-box;
   color: transparent;
   height: 6rem;
-  margin-top: $offset;
-  margin-left: $offset-neg;
+  margin-top: 2rem;
+  margin-left: -2rem;
   opacity: .2;
   padding-left: calc(2rem - 2.5pt);
   padding-right: calc(2rem - 2.5pt);
@@ -39,18 +40,25 @@
 
 .heading-solid {
   position: absolute;
-  margin-top: $offset-neg;
-  margin-left: $offset;
 }
 
 @media only screen and (max-width: 758px) {
+  .heading {
+    height: 4.25rem;
+    padding: 0 1.5rem 0 1.5rem;
+  }
   .heading-container {
     justify-content: center;
-    padding: 1rem 0 5rem 0; 
+    padding: .25rem 0 .1rem 0; 
   }
   .heading-text {
     font: {
-      size: 28pt;
+      size: 26pt;
     }
+  }
+  .heading-pattern {
+    height: 4.25rem;
+    margin-top: 1rem;
+    margin-left: -1rem;
   }
 }
