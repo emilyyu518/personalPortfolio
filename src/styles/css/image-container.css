@@ -10,14 +10,12 @@
   border-width: 3pt;
   box-sizing: border-box;
   color: transparent;
-  margin-top: 1rem;
-  margin-left: -1rem;
+  margin-top: 2rem;
+  margin-left: -2rem;
   opacity: .2; }
 
 .image {
   left: 0;
-  margin-top: -1rem;
-  margin-left: 1rem;
   position: absolute;
   top: 0; }
 
