@@ -25,12 +25,19 @@ main {
 footer {
   flex-shrink: 0; }
 
-.heading-container {
+.row {
   display: flex;
-  margin-top: 4rem;
-  position: relative;
-  padding-bottom: 4rem;
-  padding-left: 15vw; }
+  flex-direction: row; }
+
+.col {
+  display: flex;
+  flex-basis: 0;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 100%; }
+
+.heading-container {
+  position: relative; }
 
 .heading-text, .heading {
   font-family: 'futura-pt';
@@ -41,26 +48,28 @@ footer {
 .heading {
   align-items: center;
   display: flex;
+  flex-direction: row;
+  float: left;
   height: 6rem;
-  padding: 0 2rem 0 2rem;
-  position: absolute;
-  top: 0; }
+  padding: 0 2rem 0 2rem; }
 
 .heading-pattern {
   background-repeat: repeat;
   border-style: solid;
   border-width: 3pt;
+  box-sizing: border-box;
   color: transparent;
-  height: calc(6rem - 5pt);
-  margin-top: .2em;
-  margin-left: -.2em;
+  height: 6rem;
+  margin-top: 1rem;
+  margin-left: -1rem;
   opacity: .2;
   padding-left: calc(2rem - 2.5pt);
   padding-right: calc(2rem - 2.5pt); }
 
 .heading-solid {
-  margin-top: -.2em;
-  margin-left: .2em; }
+  position: absolute;
+  margin-top: -1rem;
+  margin-left: 1rem; }
 
 @media only screen and (max-width: 758px) {
   .heading-container {
@@ -69,6 +78,51 @@ footer {
 
   .heading-text, .heading {
     font-size: 28pt; } }
+.imagebox-container {
+  position: relative; }
+
+.imagebox {
+  float: left; }
+
+.imagebox-pattern {
+  background-repeat: repeat;
+  border-style: solid;
+  border-width: 3pt;
+  box-sizing: border-box;
+  color: transparent;
+  margin-top: 1rem;
+  margin-left: -1rem;
+  opacity: .2; }
+
+.image {
+  left: 0;
+  margin-top: -1rem;
+  margin-left: 1rem;
+  position: absolute;
+  top: 0; }
+
+.textbox-container {
+  position: relative; }
+
+.textbox {
+  float: left; }
+
+.textbox-pattern {
+  background-repeat: repeat;
+  border-style: solid;
+  border-width: 3pt;
+  box-sizing: border-box;
+  color: transparent;
+  margin-top: 1rem;
+  margin-left: -1rem;
+  opacity: .2; }
+
+.textbox-solid {
+  position: absolute;
+  top: 0;
+  margin-top: -1rem;
+  margin-left: 1rem; }
+
 @use autoprefixer;
 .nav-bar {
   align-items: center;
@@ -295,5 +349,69 @@ footer {
 @media only screen and (max-width: 758px) {
   .jumbotron-text {
     margin-left: 2rem; } }
+.heading-container {
+  display: flex;
+  justify-content: center;
+  margin-right: 25vw;
+  margin-top: -.5rem;
+  padding-bottom: 2rem;
+  width: 100%; }
+
+.about-row {
+  justify-content: center; }
+
+.about-col-left {
+  align-items: flex-end; }
+
+.skills-container {
+  margin-right: -3rem;
+  padding-top: 4rem; }
+
+.about-col-right {
+  flex-grow: 2;
+  padding-top: 2rem; }
+
+.icon-margin {
+  margin-right: .5rem; }
+
+.fast-facts {
+  padding-bottom: 2rem;
+  padding-left: 8rem; }
+
+.fast-facts-text {
+  display: flex;
+  flex-direction: column;
+  font-family: futura-pt;
+  font-size: 13pt;
+  padding: .5rem 2rem .5rem 1rem;
+  white-space: nowrap; }
+
+.icon-list {
+  list-style-type: none; }
+
+.icon-list-item-row {
+  display: flex;
+  flex-grow: 2;
+  padding-bottom: .5rem;
+  width: 100%; }
+
+.profession-list-item {
+  margin-left: -.25rem; }
+
+.craftmaker-list-item {
+  margin-left: .25rem;
+  margin-right: .5rem; }
+
+.about-me {
+  padding-left: 11rem;
+  padding-top: 2rem; }
+
+.about-me-text {
+  padding: 1.5rem 2rem;
+  max-width: 30rem; }
+
+@media only screen and (min-width: 2000px) {
+  .fast-facts-text {
+    font-size: 16pt; } }
 
 /*# sourceMappingURL=index.css.map */
