@@ -10,22 +10,67 @@ import IconListItem from './iconListItem';
 const About = (props) => {
   return (
     <div className="about">
-      <div className="row heading-container">
-        <Heading text="a little about me..." pattern="Stripes" />
+      <div className="row about-heading-container">
+        <div className="about-heading">
+          <Heading text="a little about me..." pattern="Stripes" />
+        </div>
       </div>
+
       <div className="row about-row">
         <div className="about-col-left col">
-          <ImageContainer image={Headshot} pattern="Dots" height="20rem" width="auto" alt="Emily Yu" />
+          <div className="headshot-container">
+            <ImageContainer image={Headshot} pattern="Dots" height="20rem" width="auto" alt="Emily Yu" imgClass="headshot" />
+          </div>
+        </div>
+
+        <div className="col about-col-right fast-facts-col">
+          <div className="fast-facts">
+            <TextContainer pattern="Pills">
+              <div className="fast-facts-text">
+                <div className="bullet-list-heading row">
+                  <h2>
+                    <span className="fas fa-bolt icon-margin" />
+                    fast facts
+                  </h2>
+                </div>
+                <div className="row fast-facts-row">
+                  <div className="col">
+                    <ul className="icon-list">
+                      <IconListItem icon="fas fa-map-marker" text="New Orleans, LA" />
+                      <IconListItem icon="fas fa-desktop" text="Programmer / Designer" iconClass="profession-list-item" />
+                    </ul>
+                  </div>
+                  <div className="col">
+                    <ul className="icon-list">
+                      <IconListItem icon="fas fa-paw" text="Cat lover" />
+                      <IconListItem icon="fas fa-headphones" text="Avid podcast listener" />
+                    </ul>
+                  </div>
+                  <div className="col">
+                    <ul className="icon-list">
+                      <IconListItem icon="fas fa-coffee" text="Coffee enthusiast" />
+                      <IconListItem icon="fas fa-cut" text="General craftmaker" iconClass="craftmaker-list-item" />
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </TextContainer>
+          </div>
+        </div>
+      </div>
+
+      <div className="row about-row">
+        <div className="col about-col-left">
           <div className="skills-container">
             <TextContainer pattern="Pills">
               <div className="fast-facts-text">
-                <div className="row">
+                <div className="row bullet-list-heading">
                   <h2>
                     <span className="fas fa-wrench icon-margin" />
                     my skills
                   </h2>
                 </div>
-                <div className="row">
+                <div className="row fast-facts-row">
                   <div className="col">
                     <ul>
                       <li>JavaScript, HTML, CSS</li>
@@ -49,39 +94,8 @@ const About = (props) => {
             </TextContainer>
           </div>
         </div>
+
         <div className="col about-col-right">
-          <div className="fast-facts">
-            <TextContainer pattern="Pills">
-              <div className="fast-facts-text">
-                <div className="row">
-                  <h2>
-                    <span className="fas fa-bolt icon-margin" />
-                    fast facts
-                  </h2>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    <ul className="icon-list">
-                      <IconListItem icon="fas fa-map-marker" text="New Orleans, LA" />
-                      <IconListItem icon="fas fa-desktop" text="Programmer / Designer" iconClass="profession-list-item" />
-                    </ul>
-                  </div>
-                  <div className="col">
-                    <ul className="icon-list">
-                      <IconListItem icon="fas fa-paw" text="Cat lover" />
-                      <IconListItem icon="fas fa-headphones" text="Avid podcast listener" />
-                    </ul>
-                  </div>
-                  <div className="col">
-                    <ul className="icon-list">
-                      <IconListItem icon="fas fa-coffee" text="Coffee enthusiast" />
-                      <IconListItem icon="fas fa-cut" text="General craftmaker" iconClass="craftmaker-list-item" />
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </TextContainer>
-          </div>
           <div className="about-me">
             <TextContainer pattern="Triangles">
               <div className="about-me-text">
@@ -104,6 +118,7 @@ const About = (props) => {
             </TextContainer>
           </div>
         </div>
+
       </div>
     </div>
   );
