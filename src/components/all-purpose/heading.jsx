@@ -30,7 +30,7 @@ const Heading = (props) => {
       borderColor: 'rgb(207, 119, 95)',
     },
   };
-  
+
   const colors = {
     Triangles: {
       backgroundColor: 'rgb(216,211,254)',
