@@ -32,3 +32,16 @@ main {
 footer {
   flex-shrink: 0; 
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-basis: 0;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 100%;
+}
