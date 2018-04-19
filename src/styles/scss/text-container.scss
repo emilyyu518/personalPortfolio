@@ -1,0 +1,27 @@
+@import '_variables';
+
+.textbox-container {
+  position: relative;
+}
+
+.textbox {
+  float: left;
+}
+
+.textbox-pattern {
+  background-repeat: repeat;
+  border-style: solid;
+  border-width: 3pt;
+  box-sizing: border-box;
+  color: transparent;
+  margin-top: $offset;
+  margin-left: $offset-neg;
+  opacity: .2;
+}
+
+.textbox-solid {
+  position: absolute;
+  top: 0;
+  margin-top: $offset-neg;
+  margin-left: $offset;
+}
