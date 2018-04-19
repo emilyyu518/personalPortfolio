@@ -67,6 +67,9 @@
 
   .about-me {
     margin-top: -4rem; } }
+@media only screen and (min-width: 759px) and (max-width: 1024px) {
+  .about-heading-container {
+    margin-top: 0; } }
 @media only screen and (max-width: 758px) {
   .about-heading-container {
     margin: 0;

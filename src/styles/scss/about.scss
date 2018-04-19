@@ -1,9 +1,5 @@
 @import '_variables';
 
-.about {
-
-}
-
 .about-heading-container {
   display: flex;
   justify-content: center;
@@ -80,6 +76,7 @@
   max-width: 30rem;
 }
 
+//extra large desktop
 @media only screen and (min-width: 2000px) {
   .about-heading-container {
     padding-bottom: 2rem;
@@ -94,6 +91,14 @@
   }
 }
 
+// tablet
+@media only screen and (min-width: 759px) and (max-width: 1024px) {
+  .about-heading-container {
+    margin-top: 0;
+  }
+}
+
+// mobile
 @media only screen and (max-width: 758px) {
   .about-heading-container {
     margin: 0;
