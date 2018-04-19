@@ -13,6 +13,7 @@ const ImageContainer = (props) => {
     height,
     width,
     alt,
+    imgClass,
   } = props;
 
   const patterns = {
@@ -49,8 +50,8 @@ const ImageContainer = (props) => {
 
   return (
     <div className="imagebox-container">
-      <div className="imagebox imagebox-pattern" style={patterns[pattern]} />
-      <img className="imagebox image" src={image} style={size} alt={alt} />
+      <div className={`imagebox imagebox-pattern ${imgClass}`} style={patterns[pattern]} />
+      <img className={`imagebox image ${imgClass}`} src={image} style={size} alt={alt} />
     </div>
   );
 };
