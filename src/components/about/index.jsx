@@ -36,20 +36,20 @@ const About = (props) => {
                 <div className="row fast-facts-row">
                   <div className="col">
                     <ul className="icon-list">
-                      <IconListItem icon="fas fa-map-marker" text="New Orleans, LA" />
-                      <IconListItem icon="fas fa-desktop" text="Programmer / Designer" iconClass="profession-list-item" />
+                      <IconListItem icon="fas fa-map-marker" text="New Orleans, LA" label="location icon" />
+                      <IconListItem icon="fas fa-desktop" text="Programmer / Designer" iconClass="profession-list-item" label="computer icon" />
                     </ul>
                   </div>
                   <div className="col">
                     <ul className="icon-list">
-                      <IconListItem icon="fas fa-paw" text="Cat lover" />
-                      <IconListItem icon="fas fa-headphones" text="Avid podcast listener" />
+                      <IconListItem icon="fas fa-paw" text="Cat lover" label="paw print icon" />
+                      <IconListItem icon="fas fa-headphones" text="Avid podcast listener" label="headphones icon" />
                     </ul>
                   </div>
                   <div className="col">
                     <ul className="icon-list">
-                      <IconListItem icon="fas fa-coffee" text="Coffee enthusiast" />
-                      <IconListItem icon="fas fa-cut" text="General craftmaker" iconClass="craftmaker-list-item" />
+                      <IconListItem icon="fas fa-coffee" text="Coffee enthusiast" label="coffee icon" />
+                      <IconListItem icon="fas fa-cut" text="General craftmaker" iconClass="craftmaker-list-item" label="scissor icon" />
                     </ul>
                   </div>
                 </div>
@@ -100,25 +100,22 @@ const About = (props) => {
             <TextContainer pattern="Triangles">
               <div className="about-me-text">
                 <p>
-                  Lorem ipsum dolor sit amet, eu sanctus laoreet vel. Mundi
-                  commune cum in, ad enim cibo definitiones vim. Harum dicunt
-                  suscipiantur his an. At mea dolorum utroque veritus. Ius ea
-                  paulo tacimates, ei nam posse tractatos accommodare, sed paulo
-                  saepe gubergren at.
+                  I am a full-stack developer with a specialty in front-end
+                  design. While programming and design are my passions, the
+                  people who will use our code are just as important: I truly
+                  believe that all applications should be not only beautiful
+                  to look at but also intuitive and accessible for all users.
                 </p>
                 <p>
-                  An vix mentitum officiis, quo ea nisl nusquam periculis. At sed
-                  propriae platonem gloriatur. Ius cu ubique prodesset, mentitum
-                  persecuti te usu. At has assum causae vituperata. Eum quis
-                  reprimique disputationi an, usu ex discere eloquentiam, in
-                  eripuit splendide his. Brute assum mea eu, mei ea liber eleifend
-                  eloquentiam, sed eu diam essent.
+                  When I&apos;m not coding, I enjoy doing crossword puzzles at my
+                  favorite cafés, reading novels that take me far from this
+                  realm of reality, and making things with my hands&mdash;from my
+                  next Mardi Gras costume to stuffed animals for my cat.
                 </p>
               </div>
             </TextContainer>
           </div>
         </div>
-
       </div>
     </div>
   );
