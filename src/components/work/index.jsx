@@ -11,7 +11,9 @@ class Portfolio extends React.Component {
   render() {
     return (
       <div>
-        <Heading text="a selection of my work..." pattern="Pills" />
+        {/* <div>
+          <Heading text="a selection of my work..." pattern="Pills" />
+        </div> */}
         <Jumbotron text="Coming soon..." jumbotronIndex={0} />
       </div>
     );
