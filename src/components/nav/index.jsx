@@ -2,21 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Brand from './brand';
 import NavButton from './nav-button';
+import Footer from './footer';
 
 const navStyle = {
   open: {
-    // display: 'inherit',
-    position: 'absolute',
-    right: 'calc(20vw - 2.5rem)',
-    top: '20vh',
-    transition: 'right .5s',
+    border: '2vh solid black',
+    boxSizing: 'border-box',
+    height: '100vh',
   },
   closed: {
-    // display: 'none',
-    // position: 'absolute',
-    // right: '-200vw',
-    // top: '20%',
-    // transition: 'right .5s',
+  },
+  notInvisible: {
+    height: '73vh',
+    width: '100vw',
+    paddingTop: '15vh',
+    position: 'inherit',
+  },
+  invisible: {
   },
 };
 
@@ -44,8 +46,8 @@ class NavBar extends React.Component {
     const { generateRandomIndex } = this.props;
     const { currentPage, navOpen } = this.state;
     return (
-      <nav className="nav-bar">
-        <Brand generateRandomIndex={generateRandomIndex} setCurrentPage={this.setCurrentPage} />
+      <nav className="nav-bar" style={navOpen ? navStyle.open : navStyle.closed}>
+        <Brand generateRandomIndex={generateRandomIndex} setCurrentPage={this.setCurrentPage} closeNav={this.closeNav} />
         <div className="hamburger-container">
           <div className="hamburger-box">
             <input
@@ -62,31 +64,36 @@ class NavBar extends React.Component {
             </label>
           </div>
         </div>
-        <div className="nav-links" style={navOpen ? navStyle.open : navStyle.closed}>
-          <NavButton
-            destination="/about"
-            color="peach"
-            text="about"
-            setCurrentPage={this.setCurrentPage}
-            active={currentPage === 'about'}
-            closeNav={this.closeNav}
-          />
-          <NavButton
-            destination="/portfolio"
-            color="ultramarine"
-            text="my work"
-            setCurrentPage={this.setCurrentPage}
-            active={currentPage === 'my work'}
-            closeNav={this.closeNav}
-          />
-          <NavButton
-            destination="/contact"
-            color="berry"
-            text="contact"
-            setCurrentPage={this.setCurrentPage}
-            active={currentPage === 'contact'}
-            closeNav={this.closeNav}
-          />
+        <div className="invisible-links-wrapper" style={navOpen ? navStyle.notInvisible : navStyle.invisible}>
+          <div className="nav-links">
+            <NavButton
+              destination="/about"
+              color="peach"
+              text="about"
+              setCurrentPage={this.setCurrentPage}
+              active={currentPage === 'about'}
+              closeNav={this.closeNav}
+            />
+            <NavButton
+              destination="/portfolio"
+              color="ultramarine"
+              text="my work"
+              setCurrentPage={this.setCurrentPage}
+              active={currentPage === 'my work'}
+              closeNav={this.closeNav}
+            />
+            <NavButton
+              destination="/contact"
+              color="berry"
+              text="contact"
+              setCurrentPage={this.setCurrentPage}
+              active={currentPage === 'contact'}
+              closeNav={this.closeNav}
+            />
+          </div>
+          <div className="mobile-nav-footer">
+            <Footer />
+          </div>
         </div>
       </nav>
     );
