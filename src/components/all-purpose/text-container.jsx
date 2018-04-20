@@ -47,8 +47,10 @@ const TextContainer = (props) => {
 
   return (
     <div className="textbox-container">
-      <div className="textbox textbox-pattern" style={patterns[pattern]}>
-        {children}
+      <div className="textbox textbox-pattern" style={patterns[pattern]} aria-hidden="true">
+        <div className="hidden">
+          {children}
+        </div>
       </div>
       <div className="textbox textbox-solid" style={colors[pattern]}>
         {children}

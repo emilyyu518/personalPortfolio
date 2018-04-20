@@ -35,4 +35,7 @@ footer {
   flex-grow: 1;
   max-width: 100%; }
 
+.hidden {
+  visibility: hidden; }
+
 /*# sourceMappingURL=App.css.map */

@@ -48,8 +48,10 @@ const Heading = (props) => {
 
   return (
     <div className="heading-container">
-      <div className="heading heading-pattern" style={patterns[pattern]}>
-        {text}
+      <div className="heading heading-pattern" style={patterns[pattern]} aria-hidden="true">
+        <div className="hidden">
+          {text}
+        </div>
       </div>
       <div className="heading heading-solid" style={colors[pattern]}>
         <h1 className="heading-text">{text}</h1>
