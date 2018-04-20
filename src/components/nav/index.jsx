@@ -37,10 +37,18 @@ class NavBar extends React.Component {
     this.setState({ currentPage: page });
   }
   toggleNav() {
-    this.setState({ navOpen: !this.state.navOpen });
+    this.setState({ navOpen: !this.state.navOpen }, () => {
+      const { navOpen } = this.state;
+      if (navOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'visible';
+      }
+    });
   }
   closeNav() {
     this.setState({ navOpen: false });
+    document.body.style.overflow = 'visible';
   }
   render() {
     const { generateRandomIndex } = this.props;
