@@ -73,6 +73,18 @@ footer {
 .heading-solid {
   position: absolute; }
 
+@media only screen and (min-width: 759px) and (max-width: 1024px) {
+  .heading-text, .heading {
+    font-size: 28pt; }
+
+  .heading {
+    height: 5rem;
+    padding: 0 1.75rem; }
+
+  .heading-pattern {
+    height: 5rem;
+    margin-top: 1.5rem;
+    margin-left: -1.5rem; } }
 @media only screen and (max-width: 758px) {
   .heading {
     height: 4.25rem;
@@ -457,8 +469,35 @@ footer {
   .about-me {
     margin-top: -4rem; } }
 @media only screen and (min-width: 759px) and (max-width: 1024px) {
+  ul {
+    margin: 0; }
+
   .about-heading-container {
-    margin-top: 0; } }
+    margin-top: 0;
+    padding: 1rem 0 2rem 8vw; }
+
+  .headshot-container {
+    margin-top: 0;
+    padding-left: 6rem; }
+
+  .headshot {
+    height: 18rem !important;
+    width: 18rem !important; }
+
+  .fast-facts {
+    padding: 1rem 0 0 8rem; }
+
+  .fast-facts-row {
+    display: block; }
+
+  .skills-container {
+    margin-right: -1rem; }
+
+  .about-me {
+    padding: 6rem 0 0 8rem; }
+
+  .about-me-text {
+    max-width: 40vw; } }
 @media only screen and (max-width: 758px) {
   .about-heading-container {
     margin: 0;

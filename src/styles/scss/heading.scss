@@ -42,6 +42,25 @@
   position: absolute;
 }
 
+// tablet
+@media only screen and (min-width: 759px) and (max-width: 1024px) {
+  .heading-text {
+    font: {
+      size: 28pt;
+    }
+  }
+  .heading {
+    height: 5rem;
+    padding: 0 1.75rem;
+  }
+  .heading-pattern {
+    height: 5rem;
+    margin-top: 1.5rem;
+    margin-left: -1.5rem;
+  }
+}
+
+// mobile
 @media only screen and (max-width: 758px) {
   .heading {
     height: 4.25rem;
