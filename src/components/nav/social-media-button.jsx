@@ -4,10 +4,8 @@ import PropTypes from 'prop-types';
 const SocialMediaButton = (props) => {
   const { name, link, icon } = props;
   return (
-    <a href={link} target="_blank" title={name} >
-      <div className="social-media-button">
-        <span className={icon} />
-      </div>
+    <a href={link} target="_blank" title={name} aria-label={name} className="social-media-button">
+      <span className={icon} aria-label="social media icon" />
     </a>
   );
 };

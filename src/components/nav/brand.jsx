@@ -19,7 +19,7 @@ class Brand extends React.Component {
     this.shuffleColors();
   }
   shuffleColors() {
-    const { generateRandomIndex, setCurrentPage } = this.props;
+    const { generateRandomIndex, setCurrentPage, closeNav } = this.props;
     const { colors } = this.state;
     const colorsCopy = colors.slice(0);
     for (let i = colorsCopy.length - 1; i > 0; i--) {
@@ -31,6 +31,7 @@ class Brand extends React.Component {
     this.setState({ colors: colorsCopy });
     generateRandomIndex();
     setCurrentPage(null);
+    closeNav();
   }
   render() {
     const { colors } = this.state;
@@ -55,11 +56,13 @@ class Brand extends React.Component {
 Brand.propTypes = {
   generateRandomIndex: PropTypes.func,
   setCurrentPage: PropTypes.func,
+  closeNav: PropTypes.func,
 };
 
 Brand.defaultProps = {
   generateRandomIndex: null,
   setCurrentPage: null,
+  closeNav: null,
 };
 
 export default Brand;

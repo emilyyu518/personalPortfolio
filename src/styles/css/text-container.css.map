@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,kBAAmB;EACjB,QAAQ,EAAE,QAAQ;;AAGpB,QAAS;EACP,KAAK,EAAE,IAAI;;AAGb,gBAAiB;EACf,iBAAiB,EAAE,MAAM;EACzB,YAAY,EAAE,KAAK;EACnB,YAAY,EAAE,GAAG;EACjB,UAAU,EAAE,UAAU;EACtB,KAAK,EAAE,WAAW;EAClB,UAAU,ECRH,IAAI;EDSX,WAAW,ECRA,KAAK;EDShB,OAAO,EAAE,EAAE;;AAGb,cAAe;EACb,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,CAAC",
+"sources": ["../scss/text-container.scss","../scss/_variables.scss"],
+"names": [],
+"file": "text-container.css"
+}

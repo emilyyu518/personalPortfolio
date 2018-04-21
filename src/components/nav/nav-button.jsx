@@ -29,24 +29,26 @@ const NavButton = (props) => {
   const currentlyActive = active || window.location.pathname === destination;
 
   return (
-    <span className="nav-link">
+    <div className="nav-link">
       <Link
         to={destination}
         onClick={() => {
           setCurrentPage(text);
           closeNav();
         }}
+        className={`nav-button nav-button-${color}`}
       >
-        <div className={`nav-button nav-button-${color}`}>
-          {text}
-        </div>
+        {text}
       </Link>
-      <Link to={destination} onClick={() => setCurrentPage(text)}>
-        <div className={`nav-button-${color}-active`} style={currentlyActive ? styles.active : styles.hidden}>
-          {text}
-        </div>
+      <Link
+        to={destination}
+        onClick={() => setCurrentPage(text)}
+        className={`nav-button-${color}-active`}
+        style={currentlyActive ? styles.active : styles.hidden}
+      >
+        {text}
       </Link>
-    </span>
+    </div>
   );
 };
 
