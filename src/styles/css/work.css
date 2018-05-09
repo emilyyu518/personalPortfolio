@@ -1,0 +1,23 @@
+.work-content-row {
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.project-left {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 3rem; }
+
+.project-right {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 3rem; }
+
+.project-1-container {
+  margin-top: 1.5rem;
+  margin-left: 0; }
+
+.project-4-container {
+  margin-top: 1.5rem;
+  margin-left: 2rem; }
+
+/*# sourceMappingURL=work.css.map */
