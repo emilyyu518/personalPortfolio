@@ -51,6 +51,7 @@ class ExpandingContainer extends React.Component {
     return {
       height: nextProps.height,
       width: nextProps.width,
+      imgWidth: nextProps.imgWidth,
     };
   }
   constructor(props) {
@@ -69,9 +70,9 @@ class ExpandingContainer extends React.Component {
       const { height, width, imgWidth } = this.props;
       if (expanded) {
         this.setState({
-          height: '50rem',
+          height: window.matchMedia('(max-width: 758px)').matches ? '75rem' : '50rem',
           width: '80vw',
-          imgWidth: '70vw',
+          imgWidth: window.matchMedia('(max-width: 758px)').matches ? '73vw' : '70vw',
         });
       } else {
         this.setState({ height, width, imgWidth });
@@ -98,29 +99,30 @@ class ExpandingContainer extends React.Component {
         <div className="textbox textbox-solid" style={{ ...colors[pattern], height, width, transition: 'all .5s' }}>
           <div className="col">
             {/* preview */}
-            <div className="row expanding-container-row">
-              <div className="preview-container">
+            <div className="preview-container">
+              <div className="row expanding-container-row">
                 <h2 className="work-heading">{heading}</h2>
-                <div className="preview-image-row">
-                  <div>
-                    <img src={image} alt={`screenshot of ${heading}'s splash page`} style={{ width: imgWidth }} className="work-screenshot" />
+
+                <div className="x-container">
+                  <div className="x-box">
+                    <input
+                      type="checkbox"
+                      className="hamburger"
+                      id={id}
+                      checked={expanded}
+                      onChange={this.toggleExpanded}
+                      />
+                    <label htmlFor={id} className="x-spin">
+                      <div className="x-cross horizontal" />
+                      <div className="x-cross vertical" />
+                    </label>
                   </div>
                 </div>
               </div>
 
-              <div className="x-container">
-                <div className="x-box">
-                  <input
-                    type="checkbox"
-                    className="hamburger"
-                    id={id}
-                    checked={expanded}
-                    onChange={this.toggleExpanded}
-                  />
-                  <label htmlFor={id} className="x-spin">
-                    <div className="x-cross horizontal" />
-                    <div className="x-cross vertical" />
-                  </label>
+              <div className="preview-image-row">
+                <div>
+                  <img src={image} alt={`screenshot of ${heading}'s splash page`} style={{ width: imgWidth }} className="work-screenshot" />
                 </div>
               </div>
             </div>
@@ -184,9 +186,9 @@ ExpandingContainer.propTypes = {
 ExpandingContainer.defaultProps = {
   id: '',
   pattern: 'Dots',
-  height: '16rem',
-  width: '35vw',
-  imgWidth: '28vw',
+  height: window.matchMedia('(max-width: 758px)').matches ? '14rem' : '16rem',
+  width: window.matchMedia('(max-width: 758px)').matches ? '80vw' : '35vw',
+  imgWidth: window.matchMedia('(max-width: 758px)').matches ? '73vw' : '28vw',
   heading: '',
   image: '',
   description: '',

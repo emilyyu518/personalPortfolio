@@ -144,7 +144,8 @@ footer {
   top: 0; }
 
 .expanding-container-row {
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding-left: .5rem; }
 
 .x-container {
   display: flex;
@@ -185,8 +186,7 @@ footer {
     transform: rotate(135deg); }
 
 .preview-container {
-  padding: .25rem 0 1rem 1rem;
-  width: 100%; }
+  padding: .25rem 0 1rem 0; }
 
 .work-heading {
   font-size: 24pt;
@@ -235,6 +235,13 @@ footer {
 .deployed-link {
   margin-left: 1rem; }
 
+@media only screen and (max-width: 758px) {
+  .expanding-container-row {
+    padding-bottom: .5rem; }
+
+  .work-description-row {
+    flex-direction: column;
+    padding: 0 .25rem 0 .5rem; } }
 @use autoprefixer;
 .nav-bar {
   align-items: center;
@@ -659,5 +666,16 @@ footer {
 .project-4-container {
   margin-top: 1.5rem;
   margin-left: 2rem; }
+
+@media only screen and (max-width: 758px) {
+  .project-left, .project-right {
+    margin-bottom: 1rem; }
+
+  .project-right {
+    margin-left: 5rem; }
+
+  .project-1-container {
+    margin-left: 2rem;
+    margin-top: 3rem; } }
 
 /*# sourceMappingURL=index.css.map */

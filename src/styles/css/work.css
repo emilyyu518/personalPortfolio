@@ -20,4 +20,15 @@
   margin-top: 1.5rem;
   margin-left: 2rem; }
 
+@media only screen and (max-width: 758px) {
+  .project-left, .project-right {
+    margin-bottom: 1rem; }
+
+  .project-right {
+    margin-left: 5rem; }
+
+  .project-1-container {
+    margin-left: 2rem;
+    margin-top: 3rem; } }
+
 /*# sourceMappingURL=work.css.map */

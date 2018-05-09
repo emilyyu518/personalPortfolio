@@ -1,5 +1,6 @@
 .expanding-container-row {
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding-left: .5rem; }
 
 .x-container {
   display: flex;
@@ -40,8 +41,7 @@
     transform: rotate(135deg); }
 
 .preview-container {
-  padding: .25rem 0 1rem 1rem;
-  width: 100%; }
+  padding: .25rem 0 1rem 0; }
 
 .work-heading {
   font-size: 24pt;
@@ -89,5 +89,13 @@
 
 .deployed-link {
   margin-left: 1rem; }
+
+@media only screen and (max-width: 758px) {
+  .expanding-container-row {
+    padding-bottom: .5rem; }
+
+  .work-description-row {
+    flex-direction: column;
+    padding: 0 .25rem 0 .5rem; } }
 
 /*# sourceMappingURL=expanding-container.css.map */
