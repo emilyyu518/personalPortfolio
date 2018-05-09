@@ -86,6 +86,7 @@ class ExpandingContainer extends React.Component {
       heading,
       image,
       description,
+      bullets,
       stack,
       githubLink,
       deployedLink,
@@ -128,12 +129,17 @@ class ExpandingContainer extends React.Component {
             <div className="col work-col" style={{ display: expanded ? 'inherit' : 'none' }}>
               <div className="row work-description-row">
                 <div className="col work-col">
-                  <p>
+                  <p className="work-description">
                     {description}
                   </p>
+                  <ul className="bullets-list">
+                    {bullets.map(bullet => (
+                      <li>{bullet}</li>
+                    ))}
+                  </ul>
                 </div>
                 <div className="col work-col">
-                  <h4 className="stack-heading">Stack</h4>
+                  <h4 className="stack-heading">Tech Stack</h4>
                   <ul className="stack-list">
                     {stack.map(technology => (
                       <li>{technology}</li>
@@ -169,6 +175,7 @@ ExpandingContainer.propTypes = {
   heading: PropTypes.string,
   image: PropTypes.string,
   description: PropTypes.string,
+  bullets: PropTypes.arrayOf(PropTypes.string),
   stack: PropTypes.arrayOf(PropTypes.string),
   githubLink: PropTypes.string,
   deployedLink: PropTypes.string,
@@ -183,6 +190,7 @@ ExpandingContainer.defaultProps = {
   heading: '',
   image: '',
   description: '',
+  bullets: [],
   stack: [],
   githubLink: '',
   deployedLink: '',

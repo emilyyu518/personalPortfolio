@@ -64,6 +64,15 @@
   justify-content: space-between;
   padding: 0 3rem; }
 
+.work-description {
+  font-weight: bold;
+  margin-top: .25rem; }
+
+.bullets-list {
+  margin-left: -1.25rem;
+  margin-top: 0;
+  padding-right: 1rem; }
+
 .stack-heading {
   font-size: 18pt; }
 
@@ -71,7 +80,8 @@
   font-family: 'futura-pt';
   font-size: 13pt;
   margin-left: -1.25rem;
-  margin-top: .25rem; }
+  margin-top: .25rem;
+  white-space: nowrap; }
 
 .work-links-row {
   justify-content: center;
