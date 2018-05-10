@@ -1,11 +1,15 @@
 {
-  "main.css": "static/css/main.70f52859.css",
-  "main.css.map": "static/css/main.70f52859.css.map",
-  "main.js": "static/js/main.663ccaa3.js",
-  "main.js.map": "static/js/main.663ccaa3.js.map",
+  "main.css": "static/css/main.9a5266a4.css",
+  "main.css.map": "static/css/main.9a5266a4.css.map",
+  "main.js": "static/js/main.b3f4bbe6.js",
+  "main.js.map": "static/js/main.b3f4bbe6.js.map",
+  "static/media/creativeconnect1.png": "static/media/creativeconnect1.4a4912f6.png",
   "static/media/dots.svg": "static/media/dots.4e1e3f05.svg",
+  "static/media/dynanner1.png": "static/media/dynanner1.87fc2b75.png",
   "static/media/emily_yu_cropped.jpg": "static/media/emily_yu_cropped.d170773c.jpg",
   "static/media/pills.svg": "static/media/pills.62a9bebf.svg",
+  "static/media/quietcorner1.png": "static/media/quietcorner1.245569aa.png",
+  "static/media/spaceshare1.png": "static/media/spaceshare1.97566f38.png",
   "static/media/stripes.svg": "static/media/stripes.0e0d2e07.svg",
   "static/media/triangles.svg": "static/media/triangles.82dd13d7.svg"
 }
