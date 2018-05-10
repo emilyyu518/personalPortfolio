@@ -67,10 +67,10 @@ class ExpandingContainer extends React.Component {
   toggleExpanded() {
     this.setState({ expanded: !this.state.expanded }, () => {
       const { expanded } = this.state;
-      const { height, width, imgWidth } = this.props;
+      const { height, width, imgWidth, mobileExpandedHeight } = this.props;
       if (expanded) {
         this.setState({
-          height: window.matchMedia('(max-width: 758px)').matches ? '75rem' : '50rem',
+          height: window.matchMedia('(max-width: 758px)').matches ? mobileExpandedHeight : '50rem',
           width: '80vw',
           imgWidth: window.matchMedia('(max-width: 758px)').matches ? '73vw' : '70vw',
         });

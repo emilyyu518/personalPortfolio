@@ -63,6 +63,7 @@ class Portfolio extends React.Component {
               stack={['React', 'Node.js', 'MySQL', 'Bootstrap', 'Facebook Login', 'Nexmo Stitch', 'AWS']}
               githubLink="https://github.com/superFruitPower/spaceShare"
               deployedLink="https://spaceshare.co/"
+              mobileExpandedHeight="65rem"
             />
           </div>
           <div className="project-right">
@@ -75,7 +76,8 @@ class Portfolio extends React.Component {
               stack={['AngularJS', 'Node.js', 'MySQL', 'Bootstrap', 'Google Places API', 'Songkick API', 'Facebook Graph API']}
               image={QuietCorner1}
               githubLink="https://github.com/WeAreKumquat/quietCorner"
-            />
+              mobileExpandedHeight="49rem"
+              />
           </div>
           <div className="project-left project-4-container">
             <ExpandingContainer
@@ -88,7 +90,8 @@ class Portfolio extends React.Component {
               stack={['React', 'Node.js', 'MongoDB', 'Bootstrap', 'Google OAuth 2.0', 'Google Calendar API', 'Digital Ocean']}
               githubLink="https://github.com/WeAreKumquat/Dynanner"
               deployedLink="http://dynanner.com/"
-            />
+              mobileExpandedHeight="55rem"
+              />
           </div>
           <div className="project-right">
             <ExpandingContainer
@@ -101,6 +104,7 @@ class Portfolio extends React.Component {
               stack={['AngularJS', 'Node.js', 'Express', 'MongoDB', 'Bootstrap', 'Behance API', 'Google OAuth 2.0']}
               githubLink="https://github.com/emilyyu518/creative-connect"
               deployedLink="https://creative-connect.herokuapp.com/"
+              mobileExpandedHeight="50rem"
             />
           </div>
         </div>
