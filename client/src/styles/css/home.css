@@ -1,0 +1,25 @@
+@use autoprefixer;
+.jumbotron-container {
+  position: relative; }
+
+.jumbotron {
+  background-repeat: 'repeat';
+  height: 60vh;
+  opacity: .2;
+  margin-top: 5%; }
+
+.jumbotron-text {
+  font-family: 'futura-pt';
+  font-size: 64pt;
+  font-style: italic;
+  font-weight: 700;
+  margin-left: 4rem;
+  margin-top: 2rem;
+  position: absolute;
+  top: 0; }
+
+@media only screen and (max-width: 758px) {
+  .jumbotron-text {
+    margin-left: 2rem; } }
+
+/*# sourceMappingURL=home.css.map */

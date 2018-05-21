@@ -1,0 +1,21 @@
+.textbox-container {
+  position: relative; }
+
+.textbox {
+  float: left; }
+
+.textbox-pattern {
+  background-repeat: repeat;
+  border-style: solid;
+  border-width: 3pt;
+  box-sizing: border-box;
+  color: transparent;
+  margin-top: 2rem;
+  margin-left: -2rem;
+  opacity: .2; }
+
+.textbox-solid {
+  position: absolute;
+  top: 0; }
+
+/*# sourceMappingURL=text-container.css.map */

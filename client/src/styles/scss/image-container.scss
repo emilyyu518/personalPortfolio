@@ -1,0 +1,26 @@
+@import '_variables';
+
+.imagebox-container {
+  position: relative;
+}
+
+.imagebox {
+  float: left;
+}
+
+.imagebox-pattern {
+  background-repeat: repeat;
+  border-style: solid;
+  border-width: 3pt;
+  box-sizing: border-box;
+  color: transparent;
+  margin-top: $offset;
+  margin-left: $offset-neg;
+  opacity: .2;
+}
+
+.image {
+  left: 0;
+  position: absolute;
+  top: 0;
+}

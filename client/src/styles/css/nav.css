@@ -1,0 +1,232 @@
+@use autoprefixer;
+.nav-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: .75rem 1rem; }
+
+.brand {
+  font-size: 33pt; }
+
+.invisible-links-wrapper {
+  display: inline-table; }
+
+.nav-links {
+  display: flex; }
+
+.nav-link {
+  display: flex;
+  position: relative; }
+
+.hamburger-box {
+  display: none;
+  background: #fff;
+  height: 2rem;
+  position: relative;
+  width: 2rem; }
+  .hamburger-box input[type=checkbox] {
+    display: none; }
+  .hamburger-box label {
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%; }
+  .hamburger-box .bun {
+    position: absolute;
+    height: .25rem;
+    width: 100%;
+    background-color: #000;
+    transition: all .5s; }
+  .hamburger-box .diagonal.bun-top {
+    position: relative;
+    float: left; }
+  .hamburger-box .horizontal {
+    position: relative;
+    float: left;
+    margin-top: .5rem; }
+  .hamburger-box .diagonal.bun-bottom {
+    position: relative;
+    float: left;
+    margin-top: .5rem; }
+  .hamburger-box input[type=checkbox]:checked ~ .hamburger-spin > .horizontal {
+    opacity: 0; }
+  .hamburger-box input[type=checkbox]:checked ~ .hamburger-spin > .diagonal.bun-top {
+    transform: rotate(135deg);
+    margin-top: .75rem; }
+  .hamburger-box input[type=checkbox]:checked ~ .hamburger-spin > .diagonal.bun-bottom {
+    transform: rotate(-135deg);
+    margin-top: -1rem; }
+
+.nav-button, .nav-button-peach-active, .nav-button-peach:hover, .nav-button-ultramarine-active, .nav-button-ultramarine:hover, .nav-button-berry-active, .nav-button-berry:hover {
+  border: 2pt solid black;
+  display: flex;
+  float: left;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 15pt;
+  font-weight: 500;
+  justify-content: center;
+  margin: 0 1.5rem 0 0;
+  padding: .3rem 0;
+  width: 7rem; }
+
+.nav-button-peach-active, .nav-button-peach:hover {
+  background-color: #cf775f;
+  border-color: #cf775f;
+  color: white;
+  font-weight: 700;
+  position: absolute; }
+
+.nav-button-peach-active:hover, .nav-button-peach:hover {
+  color: white; }
+
+.nav-button-peach:hover {
+  float: left;
+  position: static;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
+@media (hover: none), (hover: on-demand) {
+  .nav-button-peach:hover {
+    /* suppress hover effect on devices that don't support hover fully */
+    background: none;
+    border: 2pt solid black;
+    display: flex;
+    font-family: 'futura-pt', sans-serif;
+    font-size: 15pt;
+    font-weight: 500;
+    justify-content: center;
+    padding: .3rem 0;
+    width: 7rem; } }
+.nav-button-ultramarine-active, .nav-button-ultramarine:hover {
+  background-color: #3d00ff;
+  border-color: #3d00ff;
+  color: white;
+  font-weight: 700;
+  position: absolute; }
+
+.nav-button-ultramarine-active:hover, .nav-button-ultramarine:hover {
+  color: white; }
+
+.nav-button-ultramarine:hover {
+  float: left;
+  position: static;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
+@media (hover: none), (hover: on-demand) {
+  .nav-button-ultramarine:hover {
+    /* suppress hover effect on devices that don't support hover fully */
+    background: none;
+    border: 2pt solid black;
+    display: flex;
+    font-family: 'futura-pt', sans-serif;
+    font-size: 15pt;
+    font-weight: 500;
+    justify-content: center;
+    padding: .3rem 0;
+    width: 7rem; } }
+.nav-button-berry-active, .nav-button-berry:hover {
+  background-color: #bc0077;
+  border-color: #bc0077;
+  color: white;
+  font-weight: 700;
+  position: absolute; }
+
+.nav-button-berry-active:hover, .nav-button-berry:hover {
+  color: white; }
+
+.nav-button-berry:hover {
+  float: left;
+  position: static;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
+@media (hover: none), (hover: on-demand) {
+  .nav-button-berry:hover {
+    /* suppress hover effect on devices that don't support hover fully */
+    background: none;
+    border: 2pt solid black;
+    display: flex;
+    font-family: 'futura-pt', sans-serif;
+    font-size: 15pt;
+    font-weight: 500;
+    justify-content: center;
+    padding: .3rem 0;
+    width: 7rem; } }
+.mobile-nav-footer {
+  display: none; }
+
+@media only screen and (max-width: 758px) {
+  .nav-bar {
+    background-color: white;
+    border: 0 solid;
+    flex-wrap: wrap;
+    height: 3.5rem;
+    padding-bottom: 0;
+    position: sticky;
+    top: 0;
+    transition-property: border, height;
+    transition-duration: .5s;
+    z-index: 100; }
+
+  .hamburger-box {
+    display: inherit; }
+
+  .invisible-links-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    justify-content: space-between;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    transition: height .5s; }
+
+  .nav-links {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem; }
+
+  .nav-link {
+    margin-top: 2rem; }
+
+  .nav-button, .nav-button-peach-active, .nav-button-peach:hover, .nav-button-ultramarine-active, .nav-button-ultramarine:hover, .nav-button-berry-active, .nav-button-berry:hover {
+    margin: 0;
+    width: 60vw; }
+
+  .mobile-nav-footer {
+    display: inherit; } }
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem; }
+
+.social-media-button {
+  align-items: center;
+  border: 2pt solid black;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  font-size: 14pt;
+  height: 2.75rem;
+  justify-content: center;
+  margin-left: .75rem;
+  width: 2.75rem; }
+
+.social-media-button:hover {
+  background-color: #bc0077;
+  border-color: #bc0077;
+  color: white;
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease; }
+
+/*# sourceMappingURL=nav.css.map */
