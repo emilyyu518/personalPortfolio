@@ -1,0 +1,76 @@
+@import '_variables';
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+.message-form {
+  padding: 2rem;
+}
+.text-input {
+  background: none;
+  border: none;
+  border-bottom: 2pt solid black;
+  font: {
+    family: 'Raleway', sans-serif;
+    size: 12pt;
+  }
+  height: 2rem;
+  width: 15rem;
+}
+.text-input:focus {
+  border-bottom: 2pt solid $ultramarine;
+  outline: none;
+}
+// .text-input:invalid {
+//   border-bottom: 2pt solid red;
+// }
+.text-label {
+  font-family: futura-pt;
+  padding-bottom: 1rem;
+}
+.textarea-input {
+  // background: none;
+  border: 2pt solid black;
+  font: {
+    family: 'Raleway', sans-serif;
+    size: 12pt;
+  }
+  margin-bottom: 2rem;
+  margin-top: .75rem;
+  min-height: 8rem;
+  min-width: 50vw;
+  padding: .5rem; 
+}
+.textarea-input:focus {
+  border: 2pt solid $ultramarine;
+  outline: none;
+}
+// .textarea-input:invalid {
+//   border: 2pt solid red;
+// }
+.submit-button {
+  border: 2pt solid black;
+  display: flex;
+  font: {
+    family: 'futura-pt', sans-serif;
+    size: 15pt;
+    weight: $medium;
+  }
+
+  justify-content: center;
+  margin: 0 1.5rem 0 0;
+  padding: .3rem 0;
+  width: 7rem;
+}
+.submit-button:hover, .submit-button:focus {
+  background-color: $turquoise;
+  border-color: $turquoise;
+  color: white;
+  cursor: pointer;
+  font: {
+    weight: solid;
+  }
+  outline: none;
+  transition: background-color .5s ease;
+}
