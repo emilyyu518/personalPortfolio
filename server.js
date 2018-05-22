@@ -13,7 +13,22 @@ const transporter = nodemailer.createTransport({
 // app.use('/', express.static(`${__dirname}/client/build`));
 
 app.post('/api/contact', (req, res) => {
-  res.send('Hello from the new server!');
+  const { sender, subject, text } = req.body;
+  const message = {
+    from: sender,
+    to: 'hello@emilyyu.me',
+    subject,
+    text,
+    priority: 'high',
+  };
+
+  transporter.sendMail(message)
+    .then((info) => {
+      res.send('Successfully sent!');
+    })
+    .catch((error) => {
+      res.sendStatus(500);
+    })
 });
 
 app.get('*', (req, res) => {
