@@ -16,7 +16,7 @@
     size: 12pt;
   }
   height: 2rem;
-  width: 15rem;
+  width: 18rem;
 }
 .text-input:focus {
   border-bottom: 2pt solid $ultramarine;
@@ -36,7 +36,6 @@
     family: 'Raleway', sans-serif;
     size: 12pt;
   }
-  margin-bottom: 2rem;
   margin-top: .75rem;
   min-height: 8rem;
   min-width: 50vw;
@@ -49,6 +48,9 @@
 // .textarea-input:invalid {
 //   border: 2pt solid red;
 // }
+.textarea-label {
+  font-family: futura-pt;
+}
 .submit-button {
   border: 2pt solid black;
   display: flex;
@@ -59,11 +61,11 @@
   }
 
   justify-content: center;
-  margin: 0 1.5rem 0 0;
+  margin-top: 2rem;
   padding: .3rem 0;
   width: 7rem;
 }
-.submit-button:hover, .submit-button:focus {
+.submit-button:hover:enabled, .submit-button:focus:enabled {
   background-color: $turquoise;
   border-color: $turquoise;
   color: white;
@@ -73,4 +75,8 @@
   }
   outline: none;
   transition: background-color .5s ease;
+}
+.submit-button:disabled {
+  border-color: grey;
+  color: grey;
 }

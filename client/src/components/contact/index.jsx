@@ -35,13 +35,18 @@ class Contact extends React.Component {
 
   validateInput(name) {
     const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     if (name === 'sender' && !emailRegex.test(this.state.sender)) {
       this.setState({ errors: { ...this.state.errors, sender: true } });
       return true;
+    } else if (name === 'sender' && emailRegex.test(this.state.sender)) {
+      this.setState({ errors: { ...this.state.errors, sender: false } });
+      return false;
     } else if (!this.state[name].length) {
       this.setState({ errors: { ...this.state.errors, [name]: true } });
       return true;
     }
+    this.setState({ errors: { ...this.state.errors, [name]: false } });
     return false;
   }
 
@@ -84,11 +89,12 @@ class Contact extends React.Component {
                   name="sender"
                   value={sender}
                   onChange={this.handleChange}
+                  onBlur={() => this.validateInput('sender')}
                   placeholder="your_name@example.com"
                   className="text-input"
                   style={errors.sender ? invalidText : null}
                 />
-                <label htmlFor="sender" className="text-label" style={errors.sender && invalidTextLabel}>
+                <label htmlFor="sender" className="text-label" style={errors.sender ? invalidTextLabel : null}>
                   {errors.sender ? 'please enter a valid email address' : 'your email address'}
                 </label>
 
@@ -98,24 +104,30 @@ class Contact extends React.Component {
                   name="subject"
                   value={subject}
                   onChange={this.handleChange}
+                  onBlur={() => this.validateInput('subject')}
                   placeholder="Just saying hi!"
                   className="text-input"
                   style={errors.subject ? invalidText : null}
                 />
-                <label htmlFor="subject" className="text-label">
+                <label htmlFor="subject" className="text-label" style={errors.subject ? invalidTextLabel : null}>
                   {errors.subject ? 'please enter a subject for your message' : 'subject'}
                 </label>
 
                 <textarea
+                  id="text"
                   name="text"
                   value={text}
                   onChange={this.handleChange}
+                  onBlur={() => this.validateInput('text')}
                   placeholder="I'd like to talk about..."
                   className="textarea-input"
                   style={errors.text ? invalidTextarea : null}
                 />
+                <label htmlFor="text" className="textarea-label" style={errors.text ? invalidTextLabel : null}>
+                  {errors.text ? 'please enter a body for your message' : 'your message'}
+                </label>
 
-                <input type="submit" value="talk to me!" className="submit-button" />
+                <input type="submit" value="talk to me!" className="submit-button" disabled={errors.sender || errors.subject || errors.text} />
               </form>
             </div>
           </TextContainer>
