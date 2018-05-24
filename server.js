@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
@@ -11,6 +12,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // app.use('/', express.static(`${__dirname}/client/build`));
+app.use(bodyParser.json());
 
 app.post('/api/contact', (req, res) => {
   const { sender, subject, text } = req.body;
