@@ -18,55 +18,74 @@ class Contact extends React.Component {
         subject: false,
         text: false,
       },
+      messageNotReady: true,
       sendError: false,
       sent: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.validateInput = this.validateInput.bind(this);
+    this.validateAll = this.validateAll.bind(this);
     this.sendMessage = this.sendMessage.bind(this);
   }
 
   handleChange(event) {
     const { name, value } = event.target;
     this.setState({ [name]: value }, () => {
-      this.validateInput(name);
+      this.validateInput(name, () => this.validateAll());
     });
   }
 
-  validateInput(name) {
+  validateInput(name, cb) {
     const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (name === 'sender' && !emailRegex.test(this.state.sender)) {
-      this.setState({ errors: { ...this.state.errors, sender: true } });
-      return true;
-    } else if (name === 'sender' && emailRegex.test(this.state.sender)) {
-      this.setState({ errors: { ...this.state.errors, sender: false } });
+      this.setState({ errors: { ...this.state.errors, sender: true } }, cb);
       return false;
-    } else if (!this.state[name].length) {
-      this.setState({ errors: { ...this.state.errors, [name]: true } });
+    } else if (name === 'sender' && emailRegex.test(this.state.sender)) {
+      this.setState({ errors: { ...this.state.errors, sender: false } }, cb);
       return true;
+    } else if (!this.state[name].length) {
+      this.setState({ errors: { ...this.state.errors, [name]: true } }, cb);
+      return false;
     }
-    this.setState({ errors: { ...this.state.errors, [name]: false } });
-    return false;
+    this.setState({ errors: { ...this.state.errors, [name]: false } }, cb);
+    return true;
   }
 
-  sendMessage() {
-    const { sender, subject, text } = this.state;
+  validateAll() {
     const inputs = ['sender', 'subject', 'text'];
+    const validated = inputs.reduce((isValidated, input) => {
+      if (!isValidated) {
+        return false;
+      }
+      return this.validateInput(input, null);
+    }, true);
+    this.setState({ messageNotReady: !validated });
+    return validated;
+  }
 
-    axios.post('/api/contact', { sender, subject, text })
-      .then((response) => {
-        console.log(response);
-        this.setState({ sent: true });
-      })
-      .catch((error) => {
-        console.error('error getting response', error);
-        this.setState({ sendError: true });
-      });
+  sendMessage(event) {
+    const { sender, subject, text } = this.state;
+    const message = { sender, subject, text };
+    console.dir(message);
+
+    event.preventDefault();
+
+    if (this.validateAll()) {
+      axios.post('/api/contact', message)
+        .then((response) => {
+          console.log(response);
+          this.setState({ sent: true });
+        })
+        .catch((error) => {
+          console.error('error getting response', error);
+          this.setState({ sendError: true });
+        });
+    }
   }
 
   render() {
-    const { sender, subject, text, errors } = this.state;
+    const { sender, subject, text, errors, messageNotReady } = this.state;
     const invalidText = { borderBottom: '2pt solid red' };
     const invalidTextarea = { border: '2pt solid red' };
     const invalidTextLabel = { color: 'red' };
@@ -127,7 +146,7 @@ class Contact extends React.Component {
                   {errors.text ? 'please enter a body for your message' : 'your message'}
                 </label>
 
-                <input type="submit" value="talk to me!" className="submit-button" disabled={errors.sender || errors.subject || errors.text} />
+                <input type="submit" value="talk to me!" className="submit-button" disabled={errors.sender || errors.subject || errors.text || messageNotReady} />
               </form>
             </div>
           </TextContainer>
