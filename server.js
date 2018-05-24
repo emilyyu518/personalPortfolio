@@ -2,14 +2,17 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const mailgun = require('nodemailer-mailgun-transport');
 
 const app = express();
 const port = process.env.PORT || 5000;
-const transporter = nodemailer.createTransport({
-  host: 'smtp.mailgun.org',
-  port: '587',
-  secure: true,
-});
+const auth = {
+  auth: {
+    api_key: process.env.MAILGUN_API_KEY,
+    domain: 'emilyyu.me',
+  }
+};
+const transporter = nodemailer.createTransport(mailgun(auth));
 
 // app.use('/', express.static(`${__dirname}/client/build`));
 app.use(bodyParser.json());
