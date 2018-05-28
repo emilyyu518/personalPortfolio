@@ -15,6 +15,7 @@
   opacity: .2; }
 
 .textbox-solid {
+  box-sizing: border-box;
   position: absolute;
   top: 0; }
 
