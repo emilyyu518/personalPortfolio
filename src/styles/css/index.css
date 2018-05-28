@@ -10,6 +10,7 @@ body {
   min-height: 100vh; }
 
 h1, h2, h3, h4, h5 {
+  font-family: 'futura-pt';
   margin: 0; }
 
 a {
@@ -142,6 +143,111 @@ footer {
   position: absolute;
   top: 0; }
 
+.expanding-container-row {
+  justify-content: space-between;
+  padding-left: .5rem; }
+
+.x-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: .5rem;
+  padding-top: .5rem; }
+
+.x-box {
+  height: 2rem;
+  position: relative;
+  width: 2rem; }
+  .x-box input[type=checkbox] {
+    display: none; }
+  .x-box label {
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99; }
+  .x-box .x-cross {
+    position: absolute;
+    height: .25rem;
+    width: 100%;
+    background-color: #000;
+    transition: all .5s; }
+  .x-box .horizontal {
+    position: relative;
+    float: left;
+    margin-top: .6rem;
+    top: .25rem; }
+  .x-box .vertical {
+    position: relative;
+    float: left;
+    transform: rotate(90deg); }
+  .x-box input[type=checkbox]:checked ~ .x-spin > .horizontal {
+    transform: rotate(45deg); }
+  .x-box input[type=checkbox]:checked ~ .x-spin > .vertical {
+    transform: rotate(135deg); }
+
+.preview-container {
+  padding: .25rem 0 1rem 0; }
+
+.work-heading {
+  font-size: 24pt;
+  font-weight: 500;
+  margin-bottom: .25rem; }
+
+.work-col {
+  flex: 0 1 auto; }
+
+.preview-image-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.work-screenshot {
+  height: auto;
+  transition: all .5s; }
+
+.work-description-row {
+  justify-content: space-between;
+  padding: 0 3rem; }
+
+.work-description {
+  font-weight: bold;
+  margin-top: .25rem; }
+
+.bullets-list {
+  margin-left: -1.25rem;
+  margin-top: 0;
+  padding-right: 1rem; }
+
+.stack-heading {
+  font-size: 18pt; }
+
+.stack-list {
+  font-family: 'futura-pt';
+  font-size: 13pt;
+  margin-left: -1.25rem;
+  margin-top: .25rem;
+  white-space: nowrap; }
+
+.work-links-row {
+  justify-content: center;
+  width: 100%; }
+
+.deployed-link {
+  margin-left: 1rem; }
+
+@media only screen and (max-width: 758px) {
+  .expanding-container-row {
+    padding-bottom: .5rem; }
+
+  .work-description-row {
+    flex-direction: column;
+    padding: 0 .25rem 0 .75rem; }
+
+  .stack-heading {
+    margin-top: 1rem; }
+
+  .work-links-row {
+    padding-top: 1rem; } }
 @use autoprefixer;
 .nav-bar {
   align-items: center;
@@ -241,7 +347,6 @@ footer {
     font-size: 15pt;
     font-weight: 500;
     justify-content: center;
-    margin: 0 .75rem;
     padding: .3rem 0;
     width: 7rem; } }
 .nav-button-ultramarine-active, .nav-button-ultramarine:hover {
@@ -271,7 +376,6 @@ footer {
     font-size: 15pt;
     font-weight: 500;
     justify-content: center;
-    margin: 0 .75rem;
     padding: .3rem 0;
     width: 7rem; } }
 .nav-button-berry-active, .nav-button-berry:hover {
@@ -301,7 +405,6 @@ footer {
     font-size: 15pt;
     font-weight: 500;
     justify-content: center;
-    margin: 0 .75rem;
     padding: .3rem 0;
     width: 7rem; } }
 .mobile-nav-footer {
@@ -548,5 +651,40 @@ footer {
 
   .about-me-text {
     width: 70vw; } }
+.work-content-row {
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.project-left {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 3rem; }
+
+.project-right {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 3rem; }
+
+.project-1-container {
+  margin-top: 1.5rem;
+  margin-left: 0; }
+
+.project-4-container {
+  margin-top: 1.5rem;
+  margin-left: 2rem; }
+
+@media only screen and (max-width: 758px) {
+  .project-left, .project-right {
+    margin-bottom: 1rem; }
+
+  .project-right {
+    margin-left: 5rem; }
+
+  .project-1-container {
+    margin-left: 2rem;
+    margin-top: 3rem; }
+
+  .project-4-container {
+    margin-top: 0; } }
 
 /*# sourceMappingURL=index.css.map */

@@ -97,7 +97,6 @@
     font-size: 15pt;
     font-weight: 500;
     justify-content: center;
-    margin: 0 .75rem;
     padding: .3rem 0;
     width: 7rem; } }
 .nav-button-ultramarine-active, .nav-button-ultramarine:hover {
@@ -127,7 +126,6 @@
     font-size: 15pt;
     font-weight: 500;
     justify-content: center;
-    margin: 0 .75rem;
     padding: .3rem 0;
     width: 7rem; } }
 .nav-button-berry-active, .nav-button-berry:hover {
@@ -157,7 +155,6 @@
     font-size: 15pt;
     font-weight: 500;
     justify-content: center;
-    margin: 0 .75rem;
     padding: .3rem 0;
     width: 7rem; } }
 .mobile-nav-footer {
