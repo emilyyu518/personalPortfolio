@@ -54,10 +54,11 @@ class Contact extends React.Component {
   validateAll() {
     const inputs = ['sender', 'subject', 'text'];
     const validated = inputs.reduce((isValidated, input) => {
+      const inputValidated = this.validateInput(input, null);
       if (!isValidated) {
         return false;
       }
-      return this.validateInput(input, null);
+      return inputValidated;
     }, true);
     this.setState({ messageNotReady: !validated });
     return validated;
