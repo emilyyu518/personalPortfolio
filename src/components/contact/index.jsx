@@ -17,6 +17,7 @@ class Contact extends React.Component {
         text: false,
       },
       messageNotReady: true,
+      sending: false,
       sendError: false,
       sent: false,
     };
@@ -69,20 +70,37 @@ class Contact extends React.Component {
     event.preventDefault();
 
     if (this.validateAll()) {
-      axios.post('https://ylp7khqr95.execute-api.us-east-1.amazonaws.com/prod', message)
-        .then((response) => {
-          console.log(response);
-          this.setState({ sent: true });
-        })
-        .catch((error) => {
-          console.error('error getting response', error);
-          this.setState({ sendError: true });
-        });
+      this.setState({ sending: true }, () => {
+        axios.post('https://ylp7khqr95.execute-api.us-east-1.amazonaws.com/prod', message)
+          .then((response) => {
+            console.log(response);
+            this.setState({
+              sending: false,
+              sent: true,
+              sender: '',
+              subject: '',
+              text: '',
+            });
+          })
+          .catch((error) => {
+            console.error('error getting response', error);
+            this.setState({ sending: false, sendError: true });
+          });
+      });
     }
   }
 
   render() {
-    const { sender, subject, text, errors, messageNotReady } = this.state;
+    const {
+      sender,
+      subject,
+      text,
+      errors,
+      messageNotReady,
+      sending,
+      sent,
+      sendError,
+    } = this.state;
     const invalidText = { borderBottom: '2pt solid red' };
     const invalidTextarea = { border: '2pt solid red' };
     const invalidTextLabel = { color: 'red' };
@@ -143,7 +161,27 @@ class Contact extends React.Component {
                   {errors.text ? 'please enter a body for your message' : 'your message'}
                 </label>
 
-                <input type="submit" value="talk to me!" className="submit-button" disabled={errors.sender || errors.subject || errors.text || messageNotReady} />
+                <div className="row submit-row">
+                  <input type="submit" value="talk to me!" className="submit-button" disabled={errors.sender || errors.subject || errors.text || messageNotReady} />
+                  {sending && (
+                    <div className="sending">
+                      <span className="fas fa-paper-plane face-icon" aria-label="paper airplane" />
+                      sending...
+                    </div>
+                  )}
+                  {sent && (
+                    <div className="successful">
+                      <span className="fas fa-smile face-icon" aria-label="smiley face" />
+                      successfully sent!
+                    </div>
+                  )}
+                  {sendError && (
+                    <div className="failed">
+                      <span className="fas fa-frown face-icon" aria-label="frowning face" />
+                      sorry, there was an error.
+                    </div>
+                  )}
+                </div>
               </form>
             </div>
           </TextContainer>

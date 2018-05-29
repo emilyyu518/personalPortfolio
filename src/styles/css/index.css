@@ -727,6 +727,10 @@ footer {
 .textarea-label {
   font-family: futura-pt; }
 
+.submit-row {
+  align-items: center;
+  padding-top: 2rem; }
+
 .submit-button {
   border: 2pt solid black;
   display: flex;
@@ -734,7 +738,7 @@ footer {
   font-size: 15pt;
   font-weight: 500;
   justify-content: center;
-  margin-top: 2rem;
+  margin-right: 1rem;
   padding: .3rem 0;
   width: 7rem; }
 
@@ -751,5 +755,20 @@ footer {
 .submit-button:disabled {
   border-color: grey;
   color: grey; }
+
+.sending, .successful, .failed {
+  color: #3d00ff;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 15pt;
+  font-weight: 700; }
+
+.successful {
+  color: green; }
+
+.failed {
+  color: red; }
+
+.face-icon {
+  margin-right: .25rem; }
 
 /*# sourceMappingURL=index.css.map */

@@ -51,6 +51,11 @@
   font-family: futura-pt;
 }
 
+.submit-row {
+  align-items: center;
+  padding-top: 2rem;
+}
+
 .submit-button {
   border: 2pt solid black;
   display: flex;
@@ -60,7 +65,7 @@
     weight: $medium;
   }
   justify-content: center;
-  margin-top: 2rem;
+  margin-right: 1rem;
   padding: .3rem 0;
   width: 7rem;
 }
@@ -81,4 +86,26 @@
 .submit-button:disabled {
   border-color: grey;
   color: grey;
+}
+
+.sending {
+  color: $ultramarine;
+  font: {
+    family: 'futura-pt', sans-serif;
+    size: 15pt;
+    weight: $bold;
+  }
+}
+.successful {
+  @extend .sending;
+  color: green;
+}
+
+.failed {
+  @extend .sending;
+  color: red;
+}
+
+.face-icon {
+  margin-right: .25rem;
 }
