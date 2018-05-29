@@ -38,23 +38,32 @@ class Contact extends React.Component {
     const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (name === 'sender' && !emailRegex.test(this.state.sender)) {
-      this.setState({ errors: { ...this.state.errors, sender: true } }, cb);
-      return false;
+      this.setState(prevState => (
+        { errors: { ...prevState.errors, sender: true } }
+      ), cb);
     } else if (name === 'sender' && emailRegex.test(this.state.sender)) {
-      this.setState({ errors: { ...this.state.errors, sender: false } }, cb);
-      return true;
-    } else if (!this.state[name].length) {
-      this.setState({ errors: { ...this.state.errors, [name]: true } }, cb);
-      return false;
+      this.setState(prevState => (
+        { errors: { ...prevState.errors, sender: false } }
+      ), cb);
+    } else if (!this.state[name].trim().length) {
+      this.setState(prevState => (
+        { errors: { ...prevState.errors, [name]: true } }
+      ), cb);
+    } else {
+      this.setState(prevState => (
+        { errors: { ...prevState.errors, [name]: false } }
+      ), cb);
     }
-    this.setState({ errors: { ...this.state.errors, [name]: false } }, cb);
-    return true;
   }
 
   validateAll() {
     const inputs = ['sender', 'subject', 'text'];
-    const validated = inputs.reduce((isValidated, input) => {
-      const inputValidated = this.validateInput(input, null);
+    const validated = inputs.reduce(async (isValidated, input) => {
+      let inputValidated;
+      await this.validateInput(input, () => {
+        console.log(`${input} validated`, this.state.errors[input]);
+        inputValidated = !this.state.errors[input];
+      });
       if (!isValidated) {
         return false;
       }
