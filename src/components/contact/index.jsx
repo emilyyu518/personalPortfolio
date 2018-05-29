@@ -81,6 +81,7 @@ class Contact extends React.Component {
               sender: '',
               subject: '',
               text: '',
+              messageNotReady: true,
             });
           })
           .catch((error) => {
