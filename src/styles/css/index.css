@@ -44,7 +44,7 @@ footer {
   position: relative; }
 
 .heading-text, .heading {
-  font-family: 'futura-pt';
+  font-family: 'futura-pt', sans-serif;
   font-size: 36pt;
   font-style: italic;
   font-weight: 500;
@@ -741,6 +741,7 @@ footer {
   padding-top: 2rem; }
 
 .submit-button {
+  background-color: white;
   border: 2pt solid black;
   border-radius: 0;
   display: flex;
