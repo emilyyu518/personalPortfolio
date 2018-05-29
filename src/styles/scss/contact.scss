@@ -37,6 +37,7 @@
 .textarea-input {
   border: 2pt solid black;
   border-radius: 0;
+  box-sizing: border-box;
   font: {
     family: 'Raleway', sans-serif;
     size: 12pt;
@@ -100,24 +101,51 @@
   color: grey;
 }
 
-.sending {
-  color: $ultramarine;
+.send-status {
+  align-items: center;
+  display: flex;
   font: {
     family: 'futura-pt', sans-serif;
     size: 15pt;
     weight: $bold;
   }
 }
+
+.sending {
+  color: $ultramarine;
+}
+
 .successful {
-  @extend .sending;
   color: green;
 }
 
 .failed {
-  @extend .sending;
   color: red;
 }
 
-.face-icon {
+.send-status-icon {
   margin-right: .25rem;
+}
+
+// mobile
+@media only screen and (max-width: 758px) {
+  .form-container {
+    padding-top: 2rem;
+  }
+  .text-input {
+    width: 65vw;
+  }
+  .textarea-input {
+    min-height: 18vh;
+    min-width: 65vw;
+  }
+  .send-status {
+    font: {
+      size: 13pt;
+    }
+    max-width: 35vw;
+  }
+  .send-status-icon {
+    margin-right: .5rem;
+  }
 }

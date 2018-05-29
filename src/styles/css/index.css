@@ -718,6 +718,7 @@ footer {
 .textarea-input {
   border: 2pt solid black;
   border-radius: 0;
+  box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
   font-size: 12pt;
   margin-top: .75rem;
@@ -768,11 +769,15 @@ footer {
   border-color: grey;
   color: grey; }
 
-.sending, .successful, .failed {
-  color: #3d00ff;
+.send-status {
+  align-items: center;
+  display: flex;
   font-family: 'futura-pt', sans-serif;
   font-size: 15pt;
   font-weight: 700; }
+
+.sending {
+  color: #3d00ff; }
 
 .successful {
   color: green; }
@@ -780,7 +785,25 @@ footer {
 .failed {
   color: red; }
 
-.face-icon {
+.send-status-icon {
   margin-right: .25rem; }
+
+@media only screen and (max-width: 758px) {
+  .form-container {
+    padding-top: 2rem; }
+
+  .text-input {
+    width: 65vw; }
+
+  .textarea-input {
+    min-height: 18vh;
+    min-width: 65vw; }
+
+  .send-status {
+    font-size: 13pt;
+    max-width: 35vw; }
+
+  .send-status-icon {
+    margin-right: .5rem; } }
 
 /*# sourceMappingURL=index.css.map */

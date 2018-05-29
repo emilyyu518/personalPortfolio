@@ -164,21 +164,21 @@ class Contact extends React.Component {
                 <div className="row submit-row">
                   <input type="submit" value="talk to me!" className="submit-button" disabled={errors.sender || errors.subject || errors.text || messageNotReady} />
                   {sending && (
-                    <div className="sending">
-                      <span className="fas fa-paper-plane face-icon" aria-label="paper airplane" />
-                      sending...
+                    <div className="send-status sending">
+                      <span className="fas fa-paper-plane send-status-icon" aria-label="paper airplane" />
+                      <span>sending...</span>
                     </div>
                   )}
                   {sent && (
-                    <div className="successful">
-                      <span className="fas fa-smile face-icon" aria-label="smiley face" />
-                      successfully sent!
+                    <div className="send-status successful">
+                      <span className="fas fa-smile send-status-icon" aria-label="smiley face" />
+                      <span>successfully sent!</span>
                     </div>
                   )}
                   {sendError && (
-                    <div className="failed">
-                      <span className="fas fa-frown face-icon" aria-label="frowning face" />
-                      sorry, there was an error.
+                    <div className="send-status failed">
+                      <span className="fas fa-frown send-status-icon" aria-label="frowning face" />
+                      <span>sorry, there was an error.</span>
                     </div>
                   )}
                 </div>
