@@ -16,7 +16,7 @@ const Footer = (props) => {
       />
       <SocialMediaButton
         name="Emily Yu's email"
-        link="mailto:emilyyu518@gmail.com"
+        link="mailto:hello@emilyyu.me"
         icon="fas fa-envelope"
       />
     </footer>
