@@ -2,7 +2,7 @@
   position: relative; }
 
 .heading-text, .heading {
-  font-family: 'futura-pt';
+  font-family: 'futura-pt', sans-serif;
   font-size: 36pt;
   font-style: italic;
   font-weight: 500;

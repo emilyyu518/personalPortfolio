@@ -1,0 +1,125 @@
+.form-container {
+  display: flex;
+  justify-content: center; }
+
+.message-form {
+  padding: 2rem; }
+
+.text-input {
+  background: none;
+  border: none;
+  border-bottom: 2pt solid black;
+  border-radius: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12pt;
+  height: 2rem;
+  width: 18rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.text-input:focus {
+  border-bottom: 2pt solid #3d00ff;
+  outline: none; }
+
+.text-label {
+  font-family: futura-pt;
+  padding-bottom: 1rem; }
+
+.textarea-input {
+  border: 2pt solid black;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12pt;
+  margin-top: .75rem;
+  min-height: 8rem;
+  min-width: 50vw;
+  padding: .5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.textarea-input:focus {
+  border: 2pt solid #3d00ff;
+  outline: none; }
+
+.textarea-label {
+  font-family: futura-pt; }
+
+.submit-row {
+  align-items: center;
+  padding-top: 2rem; }
+
+.submit-button {
+  background-color: white;
+  border: 2pt solid black;
+  border-radius: 0;
+  display: flex;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 15pt;
+  font-weight: 500;
+  justify-content: center;
+  margin-right: 1rem;
+  padding: .3rem 0;
+  width: 7rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.submit-button:hover:enabled,
+.submit-button:focus:enabled {
+  background-color: #009980;
+  border-color: #009980;
+  color: white;
+  cursor: pointer;
+  font-weight: solid;
+  outline: none;
+  transition: background-color .5s ease; }
+
+.submit-button:disabled {
+  border-color: grey;
+  color: grey; }
+
+.send-status {
+  align-items: center;
+  display: flex;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 15pt;
+  font-weight: 700; }
+
+.sending {
+  color: #3d00ff; }
+
+.successful {
+  color: green; }
+
+.failed {
+  color: red; }
+
+.send-status-icon {
+  margin-right: .25rem; }
+
+@media only screen and (min-width: 759px) and (max-width: 1024px) {
+  .textarea-input {
+    min-width: 60vw;
+    min-height: 20vh; } }
+@media only screen and (max-width: 758px) {
+  .form-container {
+    padding-top: 2rem; }
+
+  .text-input {
+    width: 65vw; }
+
+  .textarea-input {
+    min-height: 18vh;
+    min-width: 65vw; }
+
+  .send-status {
+    font-size: 13pt;
+    max-width: 35vw; }
+
+  .send-status-icon {
+    margin-right: .5rem; } }
+
+/*# sourceMappingURL=contact.css.map */
