@@ -698,10 +698,14 @@ footer {
   background: none;
   border: none;
   border-bottom: 2pt solid black;
+  border-radius: 0;
   font-family: 'Raleway', sans-serif;
   font-size: 12pt;
   height: 2rem;
-  width: 18rem; }
+  width: 18rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
 
 .text-input:focus {
   border-bottom: 2pt solid #3d00ff;
@@ -713,12 +717,16 @@ footer {
 
 .textarea-input {
   border: 2pt solid black;
+  border-radius: 0;
   font-family: 'Raleway', sans-serif;
   font-size: 12pt;
   margin-top: .75rem;
   min-height: 8rem;
   min-width: 50vw;
-  padding: .5rem; }
+  padding: .5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
 
 .textarea-input:focus {
   border: 2pt solid #3d00ff;
@@ -733,6 +741,7 @@ footer {
 
 .submit-button {
   border: 2pt solid black;
+  border-radius: 0;
   display: flex;
   font-family: 'futura-pt', sans-serif;
   font-size: 15pt;
@@ -740,7 +749,10 @@ footer {
   justify-content: center;
   margin-right: 1rem;
   padding: .3rem 0;
-  width: 7rem; }
+  width: 7rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
 
 .submit-button:hover:enabled,
 .submit-button:focus:enabled {
