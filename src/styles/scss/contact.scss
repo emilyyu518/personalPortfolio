@@ -127,6 +127,14 @@
   margin-right: .25rem;
 }
 
+// tablet
+@media only screen and (min-width: 759px) and (max-width: 1024px) {
+  .textarea-input {
+    min-width: 60vw;
+    min-height: 20vh;
+  }
+}
+
 // mobile
 @media only screen and (max-width: 758px) {
   .form-container {
