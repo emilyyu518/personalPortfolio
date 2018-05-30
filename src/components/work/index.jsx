@@ -40,9 +40,42 @@ const creativeConnectBullets = [
 class Portfolio extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      device: 'desktop',
+    };
+    this.detectScreenSize = this.detectScreenSize.bind(this);
+  }
+  componentDidMount() {
+    this.detectScreenSize();
+    window.addEventListener('orientationchange', this.detectScreenSize());
+  }
+  componentWillUnmount() {
+    window.removeEventListener('orientationchange', this.detectScreenSize());
+  }
+  detectScreenSize() {
+    if (window.matchMedia('(max-width: 758px)').matches) {
+      this.setState({ device: 'mobile' });
+    } else if (window.matchMedia('(max-width: 1020px)').matches) {
+      this.setState({ device: 'tablet' });
+    } else {
+      this.setState({ device: 'desktop' });
+    }
   }
   render() {
+    const { device } = this.state;
+    let height = '16rem';
+    let width = '35vw';
+    let imgWidth = '28vw';
+
+    if (device === 'mobile') {
+      height = '14rem';
+      width = '80vw';
+      imgWidth = '73vw';
+    } else if (device === 'tablet') {
+      height = '13rem';
+      width = '38vw';
+      imgWidth = '32vw';
+    }
     return (
       <div>
         <div className="row about-heading-container">
@@ -63,7 +96,11 @@ class Portfolio extends React.Component {
               stack={['React', 'Node.js', 'MySQL', 'Bootstrap', 'Facebook Login', 'Nexmo Stitch', 'AWS']}
               githubLink="https://github.com/superFruitPower/spaceShare"
               deployedLink="https://spaceshare.co/"
+              height={height}
+              width={width}
+              imgWidth={imgWidth}
               mobileExpandedHeight="65rem"
+              tabletExpandedHeight="51.5rem"
             />
           </div>
           <div className="project-right">
@@ -76,7 +113,11 @@ class Portfolio extends React.Component {
               stack={['AngularJS', 'Node.js', 'MySQL', 'Bootstrap', 'Google Places API', 'Songkick API', 'Facebook Graph API']}
               image={QuietCorner1}
               githubLink="https://github.com/WeAreKumquat/quietCorner"
+              height={height}
+              width={width}
+              imgWidth={imgWidth}
               mobileExpandedHeight="49rem"
+              tabletExpandedHeight="41.5rem"
               />
           </div>
           <div className="project-left project-4-container">
@@ -90,7 +131,11 @@ class Portfolio extends React.Component {
               stack={['React', 'Node.js', 'MongoDB', 'Bootstrap', 'Google OAuth 2.0', 'Google Calendar API', 'Digital Ocean']}
               githubLink="https://github.com/WeAreKumquat/Dynanner"
               deployedLink="http://dynanner.com/"
+              height={height}
+              width={width}
+              imgWidth={imgWidth}
               mobileExpandedHeight="55rem"
+              tabletExpandedHeight="44rem"
               />
           </div>
           <div className="project-right">
@@ -104,7 +149,11 @@ class Portfolio extends React.Component {
               stack={['AngularJS', 'Node.js', 'Express', 'MongoDB', 'Bootstrap', 'Behance API', 'Google OAuth 2.0']}
               githubLink="https://github.com/emilyyu518/creative-connect"
               deployedLink="https://creative-connect.herokuapp.com/"
+              height={height}
+              width={width}
+              imgWidth={imgWidth}
               mobileExpandedHeight="50rem"
+              tabletExpandedHeight="41.5rem"
             />
           </div>
         </div>

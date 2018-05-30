@@ -45,7 +45,11 @@ const colors = {
 
 class ExpandingContainer extends React.Component {
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.width === prevState.width) {
+    if (
+      nextProps.width === prevState.width
+      && nextProps.height === prevState.height
+      && nextProps.imgWidth === prevState.imgWidth
+    ) {
       return null;
     }
     return {
@@ -67,10 +71,23 @@ class ExpandingContainer extends React.Component {
   toggleExpanded() {
     this.setState({ expanded: !this.state.expanded }, () => {
       const { expanded } = this.state;
-      const { height, width, imgWidth, mobileExpandedHeight } = this.props;
+      const {
+        height,
+        width,
+        imgWidth,
+        mobileExpandedHeight,
+        tabletExpandedHeight,
+      } = this.props;
+      let responsiveHeight = '50rem';
+      if (window.matchMedia('(max-width: 758px)').matches) {
+        responsiveHeight = mobileExpandedHeight;
+      } else if (window.matchMedia('(max-width: 1020px)').matches) {
+        responsiveHeight = tabletExpandedHeight;
+      }
+
       if (expanded) {
         this.setState({
-          height: window.matchMedia('(max-width: 758px)').matches ? mobileExpandedHeight : '50rem',
+          height: responsiveHeight,
           width: '80vw',
           imgWidth: window.matchMedia('(max-width: 758px)').matches ? '73vw' : '70vw',
         });
@@ -111,7 +128,7 @@ class ExpandingContainer extends React.Component {
                       id={id}
                       checked={expanded}
                       onChange={this.toggleExpanded}
-                      />
+                    />
                     <label htmlFor={id} className="x-spin">
                       <div className="x-cross horizontal" />
                       <div className="x-cross vertical" />
@@ -181,6 +198,7 @@ ExpandingContainer.propTypes = {
   stack: PropTypes.arrayOf(PropTypes.string),
   githubLink: PropTypes.string,
   deployedLink: PropTypes.string,
+  mobileExpandedHeight: PropTypes.string,
 };
 
 ExpandingContainer.defaultProps = {
@@ -196,6 +214,7 @@ ExpandingContainer.defaultProps = {
   stack: [],
   githubLink: '',
   deployedLink: '',
+  mobileExpandedHeight: '50rem',
 };
 
 export default ExpandingContainer;

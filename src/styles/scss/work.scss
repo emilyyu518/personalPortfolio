@@ -25,6 +25,21 @@
   margin-left: 2rem;
 }
 
+// tablet
+@media only screen and (min-width: 759px) and (max-width: 1024px) {
+  .project-left {
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+  }
+  .project-right {
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+  }
+  .project-1-container {
+    margin-left: 5rem;
+  }
+}
+
 // mobile
 @media only screen and (max-width: 758px) {
   .project-left, .project-right {
