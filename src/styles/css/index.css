@@ -236,6 +236,20 @@ footer {
 .deployed-link {
   margin-left: 1rem; }
 
+@media only screen and (min-width: 759px) and (max-width: 1024px) {
+  .expanding-container-row {
+    padding-bottom: .5rem; }
+
+  .work-heading {
+    font-size: 22.5pt; }
+
+  .x-container {
+    padding-right: .4rem;
+    padding-top: .4rem; }
+
+  .x-box .x-cross {
+    height: .22rem;
+    width: 85%; } }
 @media only screen and (max-width: 758px) {
   .expanding-container-row {
     padding-bottom: .5rem; }
@@ -674,6 +688,17 @@ footer {
   margin-top: 1.5rem;
   margin-left: 2rem; }
 
+@media only screen and (min-width: 759px) and (max-width: 1024px) {
+  .project-left {
+    margin-right: 3rem;
+    margin-bottom: 2rem; }
+
+  .project-right {
+    margin-left: 3rem;
+    margin-bottom: 2rem; }
+
+  .project-1-container {
+    margin-left: 5rem; } }
 @media only screen and (max-width: 758px) {
   .project-left, .project-right {
     margin-bottom: 1rem; }

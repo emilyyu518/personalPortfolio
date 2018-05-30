@@ -125,6 +125,26 @@
   margin-left: 1rem;
 }
 
+// tablet
+@media only screen and (min-width: 759px) and (max-width: 1024px) {
+  .expanding-container-row {
+    padding-bottom: .5rem;
+  }
+  .work-heading {
+    font: {
+      size: 22.5pt;
+    }
+  }
+  .x-container {
+    padding-right: .4rem;
+    padding-top: .4rem;
+  }
+  .x-box .x-cross {
+    height: .22rem;
+    width: 85%;
+  }
+}
+
 // mobile
 @media only screen and (max-width: 758px) {
   .expanding-container-row {
