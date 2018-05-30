@@ -249,7 +249,10 @@ footer {
 
   .x-box .x-cross {
     height: .22rem;
-    width: 85%; } }
+    width: 85%; }
+
+  .work-links-row {
+    padding-top: 1rem; } }
 @media only screen and (max-width: 758px) {
   .expanding-container-row {
     padding-bottom: .5rem; }

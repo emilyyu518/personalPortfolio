@@ -100,7 +100,7 @@ class Portfolio extends React.Component {
               width={width}
               imgWidth={imgWidth}
               mobileExpandedHeight="65rem"
-              tabletExpandedHeight="45rem"
+              tabletExpandedHeight="51.5rem"
             />
           </div>
           <div className="project-right">
@@ -117,6 +117,7 @@ class Portfolio extends React.Component {
               width={width}
               imgWidth={imgWidth}
               mobileExpandedHeight="49rem"
+              tabletExpandedHeight="41.5rem"
               />
           </div>
           <div className="project-left project-4-container">
@@ -134,6 +135,7 @@ class Portfolio extends React.Component {
               width={width}
               imgWidth={imgWidth}
               mobileExpandedHeight="55rem"
+              tabletExpandedHeight="44rem"
               />
           </div>
           <div className="project-right">
@@ -151,6 +153,7 @@ class Portfolio extends React.Component {
               width={width}
               imgWidth={imgWidth}
               mobileExpandedHeight="50rem"
+              tabletExpandedHeight="41.5rem"
             />
           </div>
         </div>
